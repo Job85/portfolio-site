@@ -33,6 +33,35 @@ export const JLogo = styled.h1`
     font-weight: 400;
     font-family: 'Parisienne', cursive;
     text-shadow: -1px -1px orangered;
+    display: inline-block;
+    margin: 0;
+    /* transform: scale(1, -1);
+    -moz-transform: scale(1, -1);
+    -webkit-transform: scale(1, -1);
+    -o-transform: scale(1, -1);
+    -ms-transform: scale(1, -1);
+    transform: scale(1, -1); */
     color: #ff44008e;
-    border: solid black;
+    /* border: solid black; */
+    
+`;
+
+export const JLogo2 = styled.h1`    
+    @import url('https://fonts.googleapis.com/css2?family=Parisienne&effect=neon&display=swap');
+
+    text-align: center;
+    font-weight: 400;
+    font-family: 'Parisienne', cursive;
+    text-shadow: -1px -1px orangered;
+    display: inline-block;
+    margin: 0;
+    transform: scale(-1, 1);
+    -moz-transform: scale(-1, 1);
+    -webkit-transform: scale(-1, 1);
+    -o-transform: scale(-1, 1);
+    -ms-transform: scale(-1, 1);
+    transform: scale(-1, 1);
+    color: #ff44008e;
+    /* border: solid black; */
+    
 `;

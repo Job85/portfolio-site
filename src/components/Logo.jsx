@@ -1,12 +1,15 @@
 import React from 'react';
-import { JLogo, LogoBox } from './StyledComponents';
+import { JLogo, JLogo2, LogoBox } from './StyledComponents';
 
 const Logo = () => {
     return (
         <LogoBox>
             <JLogo>
-                JJ
+                J
             </JLogo>
+            <JLogo2>
+                J
+            </JLogo2>
         </LogoBox>
     )
 }
