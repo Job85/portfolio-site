@@ -2,27 +2,28 @@ import styled from 'styled-components';
 
 // exported to Header.jsx
 export const HeaderBox = styled.div`
-    display: grid;
-    grid-template-areas:
-        "logo socials"
-        "nav nav nav"
-        "nav nav nav";
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
     border: solid yellow;
 `
 
 export const NavBox = styled.nav`
-    grid-area: 'nav';
+    width: 100vw;
     border: solid green;
+    align-self: center;
 `
 
 export const SocialBox = styled.div`
-    grid-area: 'socials';
+    width: 100vw;
+    align-self: center;
     border: solid red;
 `
 
 // exports to Logo.jsx
 export const LogoBox = styled.div`
-    grid-area: 'logo';
+    width: 100vw;
+    align-self: flex-start;
     border: solid blue;
 `
 export const JLogo = styled.h1`    
