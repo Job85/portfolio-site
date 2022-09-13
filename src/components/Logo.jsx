@@ -1,11 +1,13 @@
 import React from 'react';
-import { JLogo } from './StyledComponents';
+import { JLogo, LogoBox } from './StyledComponents';
 
 const Logo = () => {
     return (
-        <JLogo>
-            JJ
-        </JLogo>
+        <LogoBox>
+            <JLogo>
+                JJ
+            </JLogo>
+        </LogoBox>
     )
 }
 

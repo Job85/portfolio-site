@@ -1,11 +1,12 @@
 import React from "react";
+import { SocialBox } from "./StyledComponents";
 
 const Socials = () => {
 
     return (
-        <div>
+        <SocialBox>
             This is the Social Box
-        </div>
+        </SocialBox>
     )
 }
 
