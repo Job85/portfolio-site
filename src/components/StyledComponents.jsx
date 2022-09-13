@@ -29,9 +29,7 @@ export const LogoBox = styled.div`
     align-self: flex-start;
     border: solid blue;
     `
-export const JLogo = styled.h1`
-   @import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
-   
+export const JLogo = styled.h1`   
     font-family: 'Parisienne', cursive;
     color: #ff44008e;
     text-shadow: -1px -1px orangered;
@@ -41,8 +39,6 @@ export const JLogo = styled.h1`
 `;
 
 export const JLogo2 = styled.h1`    
-    @import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
-    
     font-family: 'Parisienne', cursive;
     color: #ff44008e; 
     text-shadow: -1px -1px orangered;
