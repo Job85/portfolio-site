@@ -1,10 +1,13 @@
-import React from 'react'
+import React from 'react';
+import { LogoContainer } from './StyledComponents';
 
 const Logo = () => {
     return (
-        <div>
-            JJ
-        </div>
+        <LogoContainer>
+            <h1 className='font-effect-neon'>
+                JJ
+            </h1>
+        </LogoContainer>
     )
 }
 
