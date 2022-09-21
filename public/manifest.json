@@ -1,6 +1,7 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Portfolio",
+  "name": "Julian's Portfolio App",
+  "author": "Julian Jernigan",
   "icons": [
     {
       "src": "favicon.ico",
