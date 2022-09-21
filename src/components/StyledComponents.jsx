@@ -8,12 +8,14 @@ export const HeaderBox = styled.div`
     border: solid yellow;
 `
 
+// exported to NavBar.jsx
 export const NavBox = styled.nav`
     width: 100vw;
     border: solid green;
     align-self: center;
 `
 
+// exported to Socials.jsx
 export const SocialBox = styled.div`
     width: 100vw;
     align-self: center;
