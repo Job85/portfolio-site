@@ -1,15 +1,11 @@
 import React from 'react';
-import { JLogo, JLogo2, LogoBox } from './StyledComponents';
+import { LogoBox, LogoImg } from './StyledComponents';
+import logo from '../assets/logo.png';
 
 const Logo = () => {
     return (
         <LogoBox>
-            <JLogo>
-                J
-            </JLogo>
-            <JLogo2>
-                J
-            </JLogo2>
+            <LogoImg src={logo} alt="mirrored jj" />
         </LogoBox>
     )
 }
