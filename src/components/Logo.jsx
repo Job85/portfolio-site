@@ -10,4 +10,5 @@ const Logo = () => {
     )
 }
 
+// exported to Header.jsx
 export default Logo

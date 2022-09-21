@@ -13,4 +13,5 @@ const NavBar = () => {
     )
 }
 
+// exported to Header.jsx
 export default NavBar

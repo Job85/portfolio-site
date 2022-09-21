@@ -10,4 +10,5 @@ const Socials = () => {
     )
 }
 
+// exported to Header.jsx
 export default Socials
