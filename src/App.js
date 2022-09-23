@@ -8,7 +8,7 @@ import Header from './components/Header';
 
 function App() {
   return (
-    <div className="App">
+    <div class='container pt-5 border'>
       <Header />
       <Routes>
         <Route path='/' element={<Home />} />
