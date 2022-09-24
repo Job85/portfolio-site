@@ -1,10 +1,11 @@
 import React from 'react';
 import logo from '../../assets/logo.png';
+import '../../scss/components/_logo.scss';
 
 const Logo = () => {
     return (
-        <div>
-            <img src={logo} alt="mirrored jj" />
+        <div className='img-div'>
+            <img src={logo} className='img-fluid' alt="mirrored jj" />
         </div>
     )
 }
