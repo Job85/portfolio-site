@@ -1,4 +1,12 @@
 .nav-bar {
     color: blue;
     border: solid red;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+
+    a {
+        display: block;
+        padding-left: 1rem;
+    }
 }

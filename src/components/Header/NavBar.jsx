@@ -6,10 +6,9 @@ const NavBar = () => {
 
     return (
         <div className="nav-bar">
-            This is the nav bar
-            {/* <NavLink to='/'>Home</NavLink>
+            <NavLink to='/'>Home</NavLink>
             <NavLink to="/about">About</NavLink>
-            <NavLink to="/projects">Projects</NavLink> */}
+            <NavLink to="/projects">Projects</NavLink>
         </div>
     )
 }
