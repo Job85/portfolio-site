@@ -7,7 +7,7 @@ import Header from './components/Header/Header';
 
 function App() {
   return (
-    <div class='container pt-5 border'>
+    <div className='container pt-5 border'>
       <Header />
       <Routes>
         <Route path='/' element={<Home />} />
