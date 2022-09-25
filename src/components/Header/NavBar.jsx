@@ -1,5 +1,6 @@
 import React from "react";
-import { FaLinkedin, FaGithub } from 'react-icons/fa';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 import logo from '../../assets/logo.png';
 import '../../scss/layout/_navigation.scss';
 
@@ -22,10 +23,10 @@ const NavBar = () => {
                     </div>
                 </div>
                 <a href="https://www.linkedin.com/in/julian-jernigan813/" target='_blank'>
-                    <FaLinkedin />
+                    <FontAwesomeIcon icon={faLinkedin} />
                 </a>
                 <a href="https://github.com/Job85" target='_blank'>
-                    <FaGithub />
+                    <FontAwesomeIcon icon={faGithub} />
                 </a>
             </div>
         </nav>
