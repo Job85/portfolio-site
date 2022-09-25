@@ -7,11 +7,11 @@ import '../../scss/layout/_header.scss';
 const Header = () => {
     return (
         <div className='container-fluid'>
-            <div className='header'>
-                <Logo />
-                <NavBar />
-                <Socials />
-            </div>
+            {/* <div className='header'> */}
+            {/* <Logo /> */}
+            <NavBar />
+            <Socials />
+            {/* </div> */}
         </div>
     )
 }
