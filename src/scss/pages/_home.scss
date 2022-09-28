@@ -36,6 +36,11 @@
         @media screen and (max-width: 360px) {
             padding: 0.5rem 0 2rem 1rem;
         }
+
+        @media screen and (max-width: 275px) {
+            padding: 0;
+            font-size: medium;
+        }
     }
 
     h2 {
@@ -49,6 +54,10 @@
         }
 
         @media screen and (max-width: 360px) {
+            padding: 0 2.5rem 0.75rem 2.5rem;
+        }
+
+        @media screen and (max-width: 275px) {
             padding: 0;
         }
     }
