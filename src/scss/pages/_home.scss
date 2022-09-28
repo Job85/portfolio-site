@@ -11,6 +11,7 @@
             rgba(3, 145, 155, 1) 100%);
     ;
 
+
     h1 {
         font-family: 'Stranger Things';
         color: darkslategray;
@@ -19,6 +20,7 @@
         font-size: 2rem;
         // transform: skew(#{$rotationAmt}deg) rotate(#{$rotationAmt}deg);
         padding: 4rem 1rem 2rem 7rem;
+
         // overflow: hidden;
         // text-shadow:
         //     3px 3px 0 white,
@@ -26,6 +28,14 @@
         //     1px -1px 0 white,
         //     -1px 1px 0 white,
         //     1px 1px 0 white;
+
+        @media screen and (max-width: 460px) {
+            padding: 2rem .5rem 1rem 3.5rem;
+        }
+
+        @media screen and (max-width: 360px) {
+            padding: 0.5rem 0 2rem 1rem;
+        }
     }
 
     h2 {
@@ -33,5 +43,13 @@
         font-size: large;
         color: darkslategray;
         padding: 0 10rem 5rem 10rem;
+
+        @media screen and (max-width: 524px) {
+            padding: 0 5rem 2.5rem 5rem;
+        }
+
+        @media screen and (max-width: 360px) {
+            padding: 0;
+        }
     }
 }
