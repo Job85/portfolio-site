@@ -6,18 +6,18 @@
     // color: #C17A2A;
     background: rgb(255, 222, 230);
     background: linear-gradient(315deg,
-            rgba(255, 222, 230, 1) 0%,
-            rgba(254, 152, 102, 1) 50%,
-            rgba(3, 145, 155, 1) 100%);
+            white 0%,
+            gray 50%,
+            black 100%);
     ;
 
 
     h1 {
-        font-family: 'Stranger Things';
-        color: darkslategray;
-        -webkit-text-stroke: 1px darkslategray;
-        -webkit-text-fill-color: darkslategray;
-        font-size: 2rem;
+        font-family: 'Lato Thin', 'Times New Roman', Times, serif;
+        color: white;
+        -webkit-text-stroke: 1px white;
+        -webkit-text-fill-color: white;
+        font-size: 3rem;
         // transform: skew(#{$rotationAmt}deg) rotate(#{$rotationAmt}deg);
         padding: 4rem 1rem 2rem 7rem;
 
@@ -46,7 +46,7 @@
     h2 {
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         font-size: large;
-        color: darkslategray;
+        color: whitesmoke;
         padding: 0 10rem 5rem 10rem;
 
         @media screen and (max-width: 524px) {
@@ -61,4 +61,8 @@
             padding: 0;
         }
     }
+}
+
+.bold {
+    font-family: 'Lato Bold';
 }
