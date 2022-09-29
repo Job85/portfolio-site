@@ -7,7 +7,7 @@ import '../scss/layout/_navigation.scss';
 const NavBar = () => {
 
     return (
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <nav className="navbar navbar-expand-lg navbar-light">
             <div className="container-fluid">
                 <a className="navbar-brand" href="#">
                     <img src={logo} alt="" height="100rem" width="100rem" />
