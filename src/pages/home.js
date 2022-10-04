@@ -11,6 +11,7 @@ const Home = () => {
                     <h1>
                         Resolving Complex Problems <br />
                         Through <span className="bold">Innovative</span> and <span className="bold">Efficient</span> Design
+                        {/* <span className="sphere container"></ span> */}
                     </h1>
                 </div>
             </div>
@@ -23,17 +24,6 @@ const Home = () => {
                     </h2>
                 </div>
             </div>
-            {/* <div className="row sign">
-                <div className="neon-sign col">
-                    <a
-                        className="btn neon"
-                        href="#"
-                        role='button'
-                    >
-                        Contact Me
-                    </a>
-                </div>
-            </div> */}
         </div>
     )
 }

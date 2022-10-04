@@ -1,33 +1,39 @@
-// $rotationAmt: -9;
-
 .hero {
-    // background-image: var(--bs-gradient);
-    // background-color: #0d6efd;
-    // color: #C17A2A;
     background: rgb(255, 222, 230);
     background: linear-gradient(315deg,
-            rgb(209, 205, 205) 0%,
-            rgb(201, 191, 191) 50%,
-            rgb(42, 14, 14) 100%);
+            rgba(255, 222, 230, 1) 0%,
+            rgba(254, 152, 102, 1) 50%,
+            rgba(3, 145, 155, 1) 100%);
+    // SUNSET background
+    // background: linear-gradient(360deg,
+    //         #FB7552 0%,
+    //         #CA4026 50%,
+    //         #7E1331 75%,
+    //         #181B46) 100%;
+    // background: linear-gradient(315deg,
+    //         whitesmoke 0%,
+    //         gray 50%,
+    //         black 100%);
+
     ;
 
 
     h1 {
+        z-index: 1;
+        position: relative;
         font-family: 'Lato Thin', 'Times New Roman', Times, serif;
-        color: white;
-        -webkit-text-stroke: 1px white;
-        -webkit-text-fill-color: white;
+        color: slategray;
+        -webkit-text-stroke: 1px #181B46;
+        -webkit-text-fill-color: #181B46;
         font-size: 3rem;
-        // transform: skew(#{$rotationAmt}deg) rotate(#{$rotationAmt}deg);
         padding: 4rem 1rem 2rem 7rem;
 
-        // overflow: hidden;
-        // text-shadow:
-        //     3px 3px 0 white,
-        //     -1px -1px 0 white,
-        //     1px -1px 0 white,
-        //     -1px 1px 0 white,
-        //     1px 1px 0 white;
+        text-shadow:
+            3px 3px 0 #181b462f,
+            -1px -1px 0 #181b462f,
+            1px -1px 0 #181b462f,
+            -1px 1px 0 #181b462f,
+            1px 1px 0 #181b462f;
 
         @media screen and (max-width: 460px) {
             padding: 2rem .5rem 1rem 3.5rem;
@@ -44,9 +50,11 @@
     }
 
     h2 {
+        position: relative;
+        z-index: 1;
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         font-size: large;
-        color: black;
+        color: #181B46;
         padding: 0 10rem 5rem 10rem;
 
         @media screen and (max-width: 524px) {
@@ -65,4 +73,24 @@
 
 .bold {
     font-family: 'Lato Bold';
+}
+
+.sphere {
+    display: block;
+    width: 200px;
+    height: 200px;
+    // margin: 30px auto 0;
+    margin: -4rem -2rem -5rem 40rem;
+    border-radius: 50%;
+    background: #E6F4BE;
+    box-shadow: 0 33px 25px 0 rgba(255, 222, 230, 0.5),
+        0 33px 25px 0 rgba(254, 152, 102, 0.5),
+        0 33px 25px 0 rgba(3, 145, 155, 0.5);
+
+    -webkit-filter: blur(50px);
+    -moz-filter: blur(50px);
+    -ms-filter: blur(50px);
+    filter: blur(50px);
+    z-index: -1;
+    position: relative;
 }
