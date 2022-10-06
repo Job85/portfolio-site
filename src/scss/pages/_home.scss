@@ -1,9 +1,19 @@
 .hero {
-    background: rgb(255, 222, 230);
-    background: linear-gradient(315deg,
-            rgba(255, 222, 230, 1) 0%,
-            rgba(254, 152, 102, 1) 50%,
-            rgba(3, 145, 155, 1) 100%);
+    background-image: linear-gradient(315deg,
+            rgba(255, 222, 230, .6) 0%,
+            rgba(254, 152, 102, .6) 50%,
+            rgba(3, 145, 155, .6) 100%),
+        url('../../assets/clouds.jpg');
+    height: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    // background: rgb(255, 222, 230);
+    // background: linear-gradient(315deg,
+    //         rgba(255, 222, 230, 1) 0%,
+    //         rgba(254, 152, 102, 1) 50%,
+    //         rgba(3, 145, 155, 1) 100%);
     // SUNSET background
     // background: linear-gradient(360deg,
     //         #FB7552 0%,
@@ -28,12 +38,6 @@
         font-size: 3rem;
         padding: 4rem 1rem 2rem 7rem;
 
-        text-shadow:
-            3px 3px 0 #181b462f,
-            -1px -1px 0 #181b462f,
-            1px -1px 0 #181b462f,
-            -1px 1px 0 #181b462f,
-            1px 1px 0 #181b462f;
 
         @media screen and (max-width: 460px) {
             padding: 2rem .5rem 1rem 3.5rem;
