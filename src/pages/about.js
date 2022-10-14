@@ -1,4 +1,5 @@
 import React from "react";
+import Email from "../components/Email";
 
 const About = () => {
 
@@ -39,9 +40,7 @@ const About = () => {
             </ul>
             <h6>NoSQL</h6>
             <ul>
-                <li>
-                    <li>MongoDB</li>
-                </li>
+                <li>MongoDB</li>
             </ul>
             <h3>Misc.</h3>
             <ul>
@@ -53,7 +52,7 @@ const About = () => {
                 <li>Authentication</li>
             </ul>
             <h3>How to reach me</h3>
-            <a>JulianJrngn@gmail.com</a>
+            <Email />
         </div>
     )
 }
