@@ -4,7 +4,7 @@ import NavBar from '../components/NavBar'
 const Home = () => {
 
     return (
-        <div className="container hero">
+        <div id="home" className="container hero">
             <NavBar />
             <div className="row">
                 <div className="col">

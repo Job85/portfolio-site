@@ -4,7 +4,7 @@ import Email from "../components/Email";
 const About = () => {
 
     return (
-        <div>
+        <div id="about">
             <h1>What I do</h1>
             <h3>Languages</h3>
             <ul>
