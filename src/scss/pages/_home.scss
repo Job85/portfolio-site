@@ -1,77 +1,46 @@
-.hero {
-    background-image: linear-gradient(315deg,
-            rgba(255, 222, 230, .6) 0%,
-            rgba(254, 152, 102, .6) 50%,
-            rgba(3, 145, 155, .6) 100%),
-        url('../../assets/clouds.jpg');
-    height: 50%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+.heading {
+    z-index: 1;
     position: relative;
-    // background: rgb(255, 222, 230);
-    // background: linear-gradient(315deg,
-    //         rgba(255, 222, 230, 1) 0%,
-    //         rgba(254, 152, 102, 1) 50%,
-    //         rgba(3, 145, 155, 1) 100%);
-    // SUNSET background
-    // background: linear-gradient(360deg,
-    //         #FB7552 0%,
-    //         #CA4026 50%,
-    //         #7E1331 75%,
-    //         #181B46) 100%;
-    // background: linear-gradient(315deg,
-    //         whitesmoke 0%,
-    //         gray 50%,
-    //         black 100%);
-
-    ;
+    font-family: 'Lato Thin', 'Times New Roman', Times, serif;
+    color: slategray;
+    -webkit-text-stroke: 1px #181B46;
+    -webkit-text-fill-color: #181B46;
+    font-size: 3rem;
+    padding: 4rem 1rem 2rem 7rem;
 
 
-    h1 {
-        z-index: 1;
-        position: relative;
-        font-family: 'Lato Thin', 'Times New Roman', Times, serif;
-        color: slategray;
-        -webkit-text-stroke: 1px #181B46;
-        -webkit-text-fill-color: #181B46;
-        font-size: 3rem;
-        padding: 4rem 1rem 2rem 7rem;
-
-
-        @media screen and (max-width: 460px) {
-            padding: 2rem .5rem 1rem 3.5rem;
-        }
-
-        @media screen and (max-width: 360px) {
-            padding: 0.5rem 0 2rem 1rem;
-        }
-
-        @media screen and (max-width: 275px) {
-            padding: 0;
-            font-size: medium;
-        }
+    @media screen and (max-width: 460px) {
+        padding: 2rem .5rem 1rem 3.5rem;
     }
 
-    h2 {
-        position: relative;
-        z-index: 1;
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-        font-size: large;
-        color: #181B46;
-        padding: 0 10rem 5rem 10rem;
+    @media screen and (max-width: 360px) {
+        padding: 0.5rem 0 2rem 1rem;
+    }
 
-        @media screen and (max-width: 524px) {
-            padding: 0 5rem 2.5rem 5rem;
-        }
+    @media screen and (max-width: 275px) {
+        padding: 0;
+        font-size: medium;
+    }
+}
 
-        @media screen and (max-width: 360px) {
-            padding: 0 2.5rem 0.75rem 2.5rem;
-        }
+.sub-heading {
+    position: relative;
+    z-index: 1;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: large;
+    color: #181B46;
+    padding: 0 10rem 5rem 10rem;
 
-        @media screen and (max-width: 275px) {
-            padding: 0;
-        }
+    @media screen and (max-width: 524px) {
+        padding: 0 5rem 2.5rem 5rem;
+    }
+
+    @media screen and (max-width: 360px) {
+        padding: 0 2.5rem 0.75rem 2.5rem;
+    }
+
+    @media screen and (max-width: 275px) {
+        padding: 0;
     }
 }
 
