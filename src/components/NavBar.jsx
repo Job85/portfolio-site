@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { HashLink as Link } from 'react-router-hash-link';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
@@ -6,12 +6,22 @@ import logo from '../assets/logo.png';
 import '../scss/layout/_navigation.scss';
 
 const NavBar = () => {
+    const [colorChange, setColorChange] = useState(false);
+    const changeNavbarColor = () => {
+        if (window.scrollY >= 40) {
+            setColorChange(true);
+        } else {
+            setColorChange(false);
+        }
+    };
+
+    window.addEventListener('scroll', changeNavbarColor);
 
     return (
-        <nav className="navbar navbar-expand-lg navbar-light sticky-top">
+        <nav className={colorChange ? 'navbar navbar-expand-md pt-3 sticky-top colorChange' : 'navbar navbar-expand-md pt-3 sticky-top'}>
             <div className="container-fluid">
                 <a className="navbar-brand" href="#">
-                    <img src={logo} alt="" height="100rem" width="100rem" />
+                    <img src={logo} alt="" className="logo" />
                 </a>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>

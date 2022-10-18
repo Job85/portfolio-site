@@ -1,10 +1,21 @@
 import React from "react";
-import '../scss/components/_hero.scss'
+import Home from '../pages/home';
+import NavBar from "./NavBar";
+import About from "../pages/about";
+import Projects from "../pages/projects";
+import '../scss/components/_hero.scss';
 const Hero = () => {
 
     return (
-        <div className="hero bg-image">
-
+        <div>
+            <div className="hero">
+                {/* <NavBar /> */}
+                <Home />
+            </div>
+            <div>
+                <About />
+                <Projects />
+            </div>
         </div>
     )
 }

@@ -1,13 +1,12 @@
 import React from "react";
+import '../scss/pages/_home.scss';
 import NavBar from '../components/NavBar'
 import Hero from "../components/Hero";
 
 const Home = () => {
 
     return (
-        <div id="home" className="container position-relative">
-            <NavBar />
-            <Hero />
+        <div id="home" className="container mt-5 pt-5 pt-sm-0">
             <div className="row">
                 <div className="col">
                     <h1 className="heading">

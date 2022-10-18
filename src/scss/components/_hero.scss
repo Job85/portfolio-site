@@ -4,9 +4,12 @@
             rgba(254, 152, 102, .6) 50%,
             rgba(3, 145, 155, .6) 100%),
         url('../../assets/clouds.jpg');
-    height: 50rem;
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+    border-radius: .3rem;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+    z-index: 0;
 }
