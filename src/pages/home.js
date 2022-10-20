@@ -19,9 +19,12 @@ const Home = () => {
             <div className="row">
                 <div className="col">
                     <h2 className="sub-heading">
-                        Specializing as a full-stack software engineer, <br />
-                        Bringing a passion for creativity and collaborative skills from the hospitality industry <br />
-                        to the tech world.
+                        My name is <span className="bold">Julian Jernigan</span>.<br />
+                        <br />
+                        I'm a full-stack software engineer. <br />
+                        My mission is to bring my passion for creativity and collaborative skills from the hospitality industry to the tech world. <br />
+                        <br />
+                        <span className="bold">(Engage Reader Here)</span>
                     </h2>
                 </div>
             </div>
