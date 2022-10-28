@@ -1,5 +1,5 @@
 #about {
-    padding-left: 3rem;
+    padding-left: 8.5rem;
     font-family: 'Lato Regular', 'Times New Roman', Times, serif;
 
     @media screen and (max-width: 385px) {
@@ -24,4 +24,33 @@
 .card-title {
     color: #181B46;
 
+}
+
+.frame {
+    padding-left: 2rem;
+    padding-right: 1.5rem;
+}
+
+.lang {
+    padding-left: 1rem;
+    padding-right: .75rem;
+}
+
+.lib {
+    padding-left: .5rem;
+    padding-right: .2rem;
+}
+
+.env {
+    padding-left: .5rem;
+    padding-right: .5rem;
+}
+
+.data {
+    padding-left: 1.75rem;
+    padding-right: 1.75rem;
+}
+
+.misc {
+    padding-left: 4.25rem;
 }
