@@ -14,35 +14,14 @@
 .card {
     width: fit-content;
     margin: 2rem 0 2rem 0;
-    border: solid rgba(254, 152, 102, 1);
+    border-radius: 50%;
     color: rgba(3, 145, 155, 1);
-    background-color: rgba(255, 222, 230, 1);
-
-    // @media screen and (max-width: ;) {
-
-    // }
+    background-image: radial-gradient(rgba(254, 152, 102, .2) 0%,
+            rgba(254, 152, 102, .5) 50%,
+            rgba(254, 152, 102, 1) 100%);
 }
 
 .card-title {
     color: #181B46;
-}
 
-.frame {
-    margin-left: 13rem;
-    margin-top: -5rem;
-}
-
-.lib {
-    margin-left: 31rem;
-    margin-top: -20rem;
-}
-
-.env {
-    margin-left: 45rem;
-    margin-top: -5rem;
-}
-
-.misc {
-    margin-left: 28rem;
-    margin-top: -15rem;
 }

@@ -4,7 +4,7 @@ import Email from "../components/Email";
 const About = () => {
 
     return (
-        <div id="about">
+        <div id="about" className="container">
             <h1>What I do</h1>
             <div className="card mt-md-0 ml-md-0 lang">
                 <div className="card-body">
