@@ -4,10 +4,10 @@ import Email from "../components/Email";
 const About = () => {
 
     return (
-        <div id="about" className="container">
-            <h1>What I do</h1>
-            <div className="card mt-md-0 ml-md-0 lang">
-                <div className="card-body">
+        <div id="about" className="container grid">
+            <h1 className="header-1">What I do</h1>
+            <div className="card mt-md-0 ml-md-0">
+                <div className="card-body lang">
                     <h3 className="card-title">
                         Languages
                     </h3>
@@ -19,8 +19,8 @@ const About = () => {
                     </ul>
                 </div>
             </div>
-            <div className="card mt-md-0 ml-md-0 frame">
-                <div className="card-body width-25%">
+            <div className="card mt-md-0 ml-md-0">
+                <div className="card-body width-25% frame">
                     <h3 className="card-title">
                         Frameworks
                     </h3>
@@ -33,8 +33,8 @@ const About = () => {
                     </ul>
                 </div>
             </div>
-            <div className="card mt-md-0 ml-md-0 lib">
-                <div className="card-body width-25%">
+            <div className="card mt-md-0 ml-md-0">
+                <div className="card-body width-25% lib">
                     <h3 className="card-title">
                         Libraries
                     </h3>
@@ -46,8 +46,8 @@ const About = () => {
                     </ul>
                 </div>
             </div>
-            <div className="card mt-md-0 ml-md-0 env">
-                <div className="card-body width-25%">
+            <div className="card mt-md-0 ml-md-0">
+                <div className="card-body width-25% env">
                     <h3 className="card-title">
                         Environments
                     </h3>
@@ -56,8 +56,8 @@ const About = () => {
                     </ul>
                 </div>
             </div>
-            <div className="card mt-md-0 ml-md-0 data">
-                <div className="card-body width-25%">
+            <div className="card mt-md-0 ml-md-0">
+                <div className="card-body width-25% data">
                     <h3 className="card-title">
                         Databases
                     </h3>
@@ -71,8 +71,8 @@ const About = () => {
                     </ul>
                 </div>
             </div>
-            <div className="card mt-md-0 ml-md-0 misc">
-                <div className="card-body width-25%">
+            <div className="card mt-md-0 ml-md-0">
+                <div className="card-body width-25% misc">
                     <h3 className="card-title">
                         Misc.
                     </h3>
@@ -86,8 +86,8 @@ const About = () => {
                     </ul>
                 </div>
             </div>
-            <h3>How to reach me</h3>
-            <Email />
+            {/* <h3>How to reach me</h3> */}
+            <Email className="email" />
         </div>
     )
 }

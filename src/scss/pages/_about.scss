@@ -23,34 +23,39 @@
 
 .card-title {
     color: #181B46;
+    padding: 0 1rem 0 1rem;
 
 }
 
 .frame {
     padding-left: 2rem;
     padding-right: 1.5rem;
+    grid-area: frame;
 }
 
 .lang {
     padding-left: 1rem;
     padding-right: .75rem;
+    grid-area: lang;
 }
 
 .lib {
     padding-left: .5rem;
     padding-right: .2rem;
-}
-
-.env {
-    padding-left: .5rem;
-    padding-right: .5rem;
+    grid-area: lib;
 }
 
 .data {
     padding-left: 1.75rem;
     padding-right: 1.75rem;
+    grid-area: data;
 }
 
 .misc {
     padding-left: 4.25rem;
+    grid-area: misc;
 }
+
+// .email {
+//     grid-area: email;
+// }
