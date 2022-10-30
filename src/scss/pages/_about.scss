@@ -21,6 +21,11 @@
             rgba(254, 152, 102, 1) 100%);
 }
 
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(254, 152, 102, .25), 0 4px 8px rgba(254, 152, 102, .5);
+}
+
 .card-title {
     color: #181B46;
     padding: 0 1rem 0 1rem;
