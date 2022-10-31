@@ -1,3 +1,5 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHtml5, faCss3Alt, faSquareJs, faSass, faBootstrap, faVuejs, faReact, faNode } from "@fortawesome/free-brands-svg-icons";
 import React from "react";
 import Email from "../components/Email";
 
@@ -12,9 +14,15 @@ const About = () => {
                         Languages
                     </h3>
                     <ul>
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>JavaScript</li>
+                        <li>
+                            <FontAwesomeIcon icon={faHtml5} />
+                        </li>
+                        <li>
+                            <FontAwesomeIcon icon={faCss3Alt} />
+                        </li>
+                        <li>
+                            <FontAwesomeIcon icon={faSquareJs} />
+                        </li>
                         <li>Python</li>
                     </ul>
                 </div>
@@ -25,10 +33,16 @@ const About = () => {
                         Frameworks
                     </h3>
                     <ul>
-                        <li>SCSS</li>
-                        <li>Bootstrap</li>
+                        <li>
+                            <FontAwesomeIcon icon={faSass} />
+                        </li>
+                        <li>
+                            <FontAwesomeIcon icon={faBootstrap} />
+                        </li>
                         <li>Express</li>
-                        <li>Vue</li>
+                        <li>
+                            <FontAwesomeIcon icon={faVuejs} />
+                        </li>
                         <li>Django</li>
                     </ul>
                 </div>
@@ -39,7 +53,9 @@ const About = () => {
                         Libraries
                     </h3>
                     <ul>
-                        <li>React JS</li>
+                        <li>
+                            <FontAwesomeIcon icon={faReact} />
+                        </li>
                         <li>Sequelize</li>
                         <li>Mongoose</li>
 
@@ -52,7 +68,9 @@ const About = () => {
                         Environments
                     </h3>
                     <ul>
-                        <li>Node JS</li>
+                        <li>
+                            <FontAwesomeIcon icon={faNode} />
+                        </li>
                     </ul>
                 </div>
             </div>
