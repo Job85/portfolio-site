@@ -19,11 +19,13 @@
     background-image: radial-gradient(rgba(254, 152, 102, .2) 0%,
             rgba(254, 152, 102, .5) 50%,
             rgba(254, 152, 102, 1) 100%);
+
+    ul {
+        list-style: none;
+    }
 }
 
 .card:hover {
-    // transform: scale(1.05);
-    // box-shadow: 0 10px 20px rgba(254, 152, 102, .25), 0 4px 8px rgba(254, 152, 102, .5);
     animation: Jump 1s linear infinite;
     left: 0;
     bottom: 0;
@@ -62,6 +64,10 @@
 .misc {
     padding-left: 4.25rem;
     grid-area: misc;
+}
+
+.node-icon {
+    font-size: xx-large;
 }
 
 @keyframes Jump {

@@ -69,7 +69,7 @@ const About = () => {
                     </h3>
                     <ul>
                         <li>
-                            <FontAwesomeIcon icon={faNode} />
+                            <FontAwesomeIcon icon={faNode} className='node-icon' />
                         </li>
                     </ul>
                 </div>
