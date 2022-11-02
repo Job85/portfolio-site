@@ -12,7 +12,7 @@ const Hero = () => {
                 {/* <NavBar /> */}
                 <Home />
             </div>
-            <div>
+            <div className="page">
                 <About />
                 <Projects />
             </div>
