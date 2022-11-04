@@ -1,7 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHtml5, faCss3Alt, faSquareJs, faSass, faBootstrap, faVuejs, faReact, faNode } from "@fortawesome/free-brands-svg-icons";
 import React from "react";
-import Email from "../components/Email";
 
 const About = () => {
 
@@ -104,8 +103,6 @@ const About = () => {
                     </ul>
                 </div>
             </div>
-            {/* <h3>How to reach me</h3> */}
-            <Email className="email" />
         </div>
     )
 }
