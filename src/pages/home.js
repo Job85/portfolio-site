@@ -1,7 +1,6 @@
 import React from "react";
 import '../scss/pages/_home.scss';
-import NavBar from '../components/NavBar'
-import Hero from "../components/Hero";
+import Email from "../components/Email";
 
 const Home = () => {
 
@@ -24,7 +23,9 @@ const Home = () => {
                         I'm a full-stack software engineer. <br />
                         My mission is to bring my passion for creativity and collaborative skills from the hospitality industry to the tech world. <br />
                         <br />
-                        <span className="bold">(Engage Reader Here)</span>
+                        <span className="bold">
+                            <Email />
+                        </span>
                     </h2>
                 </div>
             </div>
