@@ -14,13 +14,22 @@ const About = () => {
                     </h3>
                     <ul>
                         <li>
-                            <FontAwesomeIcon icon={faHtml5} className='small-icon' />
+                            <FontAwesomeIcon
+                                icon={faHtml5}
+                                className='small-icon'
+                            />
                         </li>
                         <li>
-                            <FontAwesomeIcon icon={faCss3Alt} className='small-icon' />
+                            <FontAwesomeIcon
+                                icon={faCss3Alt}
+                                className='small-icon'
+                            />
                         </li>
                         <li>
-                            <FontAwesomeIcon icon={faSquareJs} className='small-icon' />
+                            <FontAwesomeIcon
+                                icon={faSquareJs}
+                                className='small-icon'
+                            />
                         </li>
                         <li>Python</li>
                     </ul>
@@ -33,14 +42,23 @@ const About = () => {
                     </h3>
                     <ul>
                         <li>
-                            <FontAwesomeIcon icon={faSass} className='small-icon' />
+                            <FontAwesomeIcon
+                                icon={faSass}
+                                className='small-icon'
+                            />
                         </li>
                         <li>
-                            <FontAwesomeIcon icon={faBootstrap} className='small-icon' />
+                            <FontAwesomeIcon
+                                icon={faBootstrap}
+                                className='small-icon'
+                            />
                         </li>
                         <li>Express</li>
                         <li>
-                            <FontAwesomeIcon icon={faVuejs} className='small-icon' />
+                            <FontAwesomeIcon
+                                icon={faVuejs}
+                                className='small-icon'
+                            />
                         </li>
                         <li>Django</li>
                     </ul>
@@ -53,7 +71,10 @@ const About = () => {
                     </h3>
                     <ul>
                         <li>
-                            <FontAwesomeIcon icon={faReact} className='small-icon' />
+                            <FontAwesomeIcon
+                                icon={faReact}
+                                className='small-icon'
+                            />
                         </li>
                         <li>Sequelize</li>
                         <li>Mongoose</li>
@@ -68,7 +89,10 @@ const About = () => {
                     </h3>
                     <ul>
                         <li>
-                            <FontAwesomeIcon icon={faNode} className='small-icon' />
+                            <FontAwesomeIcon
+                                icon={faNode}
+                                className='small-icon'
+                            />
                         </li>
                     </ul>
                 </div>
