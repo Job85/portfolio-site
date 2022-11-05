@@ -73,7 +73,7 @@ const About = () => {
                         <li>
                             <FontAwesomeIcon
                                 icon={faReact}
-                                className='small-icon'
+                                className='small-icon react'
                             />
                         </li>
                         <li>Sequelize</li>
