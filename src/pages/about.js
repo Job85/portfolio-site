@@ -8,6 +8,7 @@ const About = () => {
         <div id="about" className="container grid">
             <h1 className="header-1">What I do</h1>
             <div className="card mt-md-0 ml-md-0">
+                <div className="outline"></div>
                 <div className="card-body lang">
                     <h3 className="card-title">
                         Languages
@@ -36,6 +37,7 @@ const About = () => {
                 </div>
             </div>
             <div className="card mt-md-0 ml-md-0">
+                <div className="outline"></div>
                 <div className="card-body width-25% frame">
                     <h3 className="card-title">
                         Frameworks
@@ -65,6 +67,7 @@ const About = () => {
                 </div>
             </div>
             <div className="card mt-md-0 ml-md-0">
+                <div className="outline"></div>
                 <div className="card-body width-25% lib">
                     <h3 className="card-title">
                         Libraries
@@ -83,6 +86,7 @@ const About = () => {
                 </div>
             </div>
             <div className="card mt-md-0 ml-md-0">
+                <div className="outline"></div>
                 <div className="card-body width-25% env">
                     <h3 className="card-title">
                         Environments
@@ -98,6 +102,7 @@ const About = () => {
                 </div>
             </div>
             <div className="card mt-md-0 ml-md-0">
+                <div className="outline"></div>
                 <div className="card-body width-25% data">
                     <h3 className="card-title">
                         Databases
@@ -113,6 +118,7 @@ const About = () => {
                 </div>
             </div>
             <div className="card mt-md-0 ml-md-0">
+                <div className="outline"></div>
                 <div className="card-body width-25% misc">
                     <h3 className="card-title">
                         Misc.

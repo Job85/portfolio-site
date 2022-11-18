@@ -12,29 +12,39 @@
 }
 
 .card {
+    position: relative;
     width: fit-content;
     margin: 2rem 0 2rem 0;
+    border: transparent;
     border-radius: 50%;
     color: rgba(3, 145, 155, 1);
     background-image: radial-gradient(rgba(254, 152, 102, .2) 0%,
             rgba(254, 152, 102, .5) 50%,
             rgba(254, 152, 102, 1) 100%);
+    // background-image: radial-gradient(circle at 1rem 1rem, #5cabff, #000) // animation: Rotate 12s linear infinite;
 
     ul {
         list-style: none;
     }
 }
 
-.card:hover {
-    animation: Jump 1s linear infinite;
-    left: 0;
+.outline {
+    position: absolute;
+    top: 0;
     bottom: 0;
+    left: 0;
+    right: 0;
+    background: transparent;
+    border: .1rem solid;
+    border-radius: 50%;
+    // border-color: rgb(3, 145, 155);
+
+    animation: Rotate 2s linear infinite;
 }
 
 .card-title {
     color: #181B46;
     padding: 0 1rem 0 1rem;
-
 }
 
 .frame {
@@ -44,8 +54,8 @@
 }
 
 .lang {
-    padding-left: 1rem;
-    padding-right: .75rem;
+    padding-left: 1.5rem;
+    padding-right: 1rem;
     grid-area: lang;
 }
 
@@ -71,7 +81,7 @@
 }
 
 .react {
-    animation: Rotate linear 12s infinite;
+    animation: Spin linear 12s infinite;
 }
 
 @keyframes Jump {
@@ -86,12 +96,22 @@
     }
 }
 
-@keyframes Rotate {
+@keyframes Spin {
     from {
         transform: rotate(0deg);
     }
 
     to {
         transform: rotate(360deg);
+    }
+}
+
+@keyframes Rotate {
+    from {
+        transform: rotateY(0deg);
+    }
+
+    to {
+        transform: rotateY(360deg);
     }
 }
