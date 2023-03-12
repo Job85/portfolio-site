@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHtml5, faCss3Alt, faSquareJs, faSass, faBootstrap, faVuejs, faReact, faNode } from "@fortawesome/free-brands-svg-icons";
+import { faHtml5, faCss3Alt, faSquareJs, faSass, faBootstrap, faVuejs, faReact, faNode, faPython } from "@fortawesome/free-brands-svg-icons";
 import React from "react";
 
 const About = () => {
@@ -32,7 +32,12 @@ const About = () => {
                                 className='small-icon'
                             />
                         </li>
-                        <li>Python</li>
+                        <li><FontAwesomeIcon
+                            icon={faPython}
+                            className='small-icon'
+                        />
+
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -109,7 +114,7 @@ const About = () => {
                     </h3>
                     <h6>SQL</h6>
                     <ul>
-                        <li>PostreSQL</li>
+                        <li>PostgreSQL</li>
                     </ul>
                     <h6>NoSQL</h6>
                     <ul>
