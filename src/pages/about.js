@@ -123,7 +123,6 @@ const About = () => {
                             <MongoDB_SlateBlue
                                 className="img-fluid mongo-db d-flex top-50 start-0"
                                 height="60"
-
                             />
                         </li>
                     </ul>
