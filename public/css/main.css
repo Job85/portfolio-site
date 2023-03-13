@@ -10,6 +10,7 @@
   flex-direction: row;
   justify-content: flex-start;
 }
+
 .nav-bar a {
   display: block;
   padding-left: 1rem;
