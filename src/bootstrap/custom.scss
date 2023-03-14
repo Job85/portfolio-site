@@ -18,20 +18,3 @@
 // 5. Add additional custom code here
 
 @import "bootstrap";
-
-.card-about {
-    @extend .card;
-    position: relative;
-    width: fit-content;
-    margin: 2rem 0 2rem 0;
-    border: transparent;
-    border-radius: 50%;
-    color: rgba(3, 145, 155, 1);
-    background-image: radial-gradient(rgba(254, 152, 102, .2) 0%,
-            rgba(254, 152, 102, .5) 50%,
-            rgba(254, 152, 102, 1) 100%);
-
-    ul {
-        list-style: none;
-    }
-}
