@@ -3,7 +3,7 @@ import { HashLink as Link } from 'react-router-hash-link';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 import logo from '../assets/logo.png';
-import '../scss/layout/_navigation.scss';
+import '../bootstrap/scss/layout/_navigation.scss';
 
 const NavBar = () => {
     const [colorChange, setColorChange] = useState(false);

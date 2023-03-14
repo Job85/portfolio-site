@@ -1,5 +1,5 @@
 import React from "react";
-import '../scss/pages/_home.scss';
+import '../bootstrap/scss/pages/_home.scss';
 import Email from "../components/Email";
 
 const Home = () => {
