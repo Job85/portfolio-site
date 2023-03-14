@@ -11,22 +11,22 @@
     }
 }
 
-// .card {
-//     position: relative;
-//     width: fit-content;
-//     margin: 2rem 0 2rem 0;
-//     border: transparent;
-//     border-radius: 50%;
-//     color: rgba(3, 145, 155, 1);
-//     background-image: radial-gradient(rgba(254, 152, 102, .2) 0%,
-//             rgba(254, 152, 102, .5) 50%,
-//             rgba(254, 152, 102, 1) 100%);
-//     // background-image: radial-gradient(circle at 1rem 1rem, #5cabff, #000) // animation: Rotate 12s linear infinite;
+.about {
+    position: relative;
+    width: fit-content;
+    margin: 2rem 0 2rem 0;
+    border: transparent;
+    border-radius: 50%;
+    color: rgba(3, 145, 155, 1);
+    background-image: radial-gradient(rgba(254, 152, 102, .2) 0%,
+            rgba(254, 152, 102, .5) 50%,
+            rgba(254, 152, 102, 1) 100%);
+    // background-image: radial-gradient(circle at 1rem 1rem, #5cabff, #000) // animation: Rotate 12s linear infinite;
 
-//     ul {
-//         list-style: none;
-//     }
-// }
+    ul {
+        list-style: none;
+    }
+}
 
 .outline {
     position: absolute;
@@ -82,6 +82,10 @@
 
 .react {
     animation: Spin linear 12s infinite;
+}
+
+.mongo-db {
+    align-items: flex-start;
 }
 
 @keyframes Jump {

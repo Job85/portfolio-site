@@ -1,0 +1,37 @@
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import "../../node_modules/bootstrap/scss/functions";
+
+// 2. Include any default variable overrides here
+
+// 3. Include remainder of required Bootstrap stylesheets
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+
+// 4. Include any optional Bootstrap components as you like
+@import "../../node_modules/bootstrap/scss/root";
+@import "../../node_modules/bootstrap/scss/reboot";
+@import "../../node_modules/bootstrap/scss/type";
+@import "../../node_modules/bootstrap/scss/images";
+@import "../../node_modules/bootstrap/scss/containers";
+@import "../../node_modules/bootstrap/scss/grid";
+
+// 5. Add additional custom code here
+
+@import "bootstrap";
+
+.card-about {
+    @extend .card;
+    position: relative;
+    width: fit-content;
+    margin: 2rem 0 2rem 0;
+    border: transparent;
+    border-radius: 50%;
+    color: rgba(3, 145, 155, 1);
+    background-image: radial-gradient(rgba(254, 152, 102, .2) 0%,
+            rgba(254, 152, 102, .5) 50%,
+            rgba(254, 152, 102, 1) 100%);
+
+    ul {
+        list-style: none;
+    }
+}
