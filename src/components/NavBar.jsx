@@ -20,9 +20,9 @@ const NavBar = () => {
     return (
         <nav className={colorChange ? 'navbar navbar-expand-md pt-3 sticky-top colorChange' : 'navbar navbar-expand-md pt-3 sticky-top'}>
             <div className="container-fluid">
-                <a className="navbar-brand" href="#">
+                <Link className="navbar-brand" to="#">
                     <img src={logo} alt="" className="logo" />
-                </a>
+                </Link>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
@@ -33,10 +33,10 @@ const NavBar = () => {
                         <Link className="nav-link" to="#projects">Projects</Link>
                     </div>
                     <div>
-                        <a href="https://www.linkedin.com/in/julian-jernigan813/" target='_blank'>
+                        <a href="https://www.linkedin.com/in/julian-jernigan813/" target='blank'>
                             <FontAwesomeIcon className='icon' icon={faLinkedin} />
                         </a>
-                        <a href="https://github.com/Job85" target='_blank'>
+                        <a href="https://github.com/Job85" target='blank'>
                             <FontAwesomeIcon className='icon' icon={faGithub} />
                         </a>
                     </div>
