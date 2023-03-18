@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHtml5, faCss3Alt, faSquareJs, faSass, faBootstrap, faVuejs, faReact, faNode, faPython } from "@fortawesome/free-brands-svg-icons";
-import { ReactComponent as MongoDB_SlateBlue } from '../assets/MongoDB_SlateBlue.svg';
+import { ReactComponent as MongoDBSlateBlue } from '../assets/MongoDB_SlateBlue.svg';
 import React from "react";
 
 const About = () => {
@@ -120,7 +120,7 @@ const About = () => {
                     <h6>NoSQL</h6>
                     <ul>
                         <li>
-                            <MongoDB_SlateBlue
+                            <MongoDBSlateBlue
                                 className="img-fluid mongo-db d-flex top-50 start-0"
                                 width="90"
                                 height="60"
