@@ -3,6 +3,9 @@ import { HashLink as Link } from 'react-router-hash-link';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 import logo from '../assets/logo.png';
+import Container from 'react-bootstrap/Container';
+import Navbar from 'react-bootstrap/Navbar';
+import Nav from 'react-bootstrap/Nav'
 import '../bootstrap/scss/layout/_navigation.scss';
 
 const NavBar = () => {
@@ -18,45 +21,29 @@ const NavBar = () => {
     window.addEventListener('scroll', changeNavbarColor);
 
     return (
-        <nav className={colorChange ? 'navbar navbar-expand-md pt-3 sticky-top colorChange' : 'navbar navbar-expand-md pt-3 sticky-top'}>
-            <div className="container-fluid">
-                <Link className="navbar-brand" to="#">
+        <Navbar collapseOnSelect expand='lg' className={colorChange ? 'pt-3 pb-0 sticky-top colorChange' : 'pt-3 pb-0 sticky-top'}>
+            <Container className="me-100">
+                <Navbar.Brand className="" href="#">
                     <img src={logo} alt="" className="logo" />
-                </Link>
-                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
-                </button>
-                <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div className="navbar-nav">
-                        <Link className="nav-link" aria-current="page" to="#">Home</Link>
-                        <Link className="nav-link" to="#about">About</Link>
-                        <Link className="nav-link" to="#projects">Projects</Link>
-                    </div>
-                    <div>
+                </Navbar.Brand>
+                <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                <Navbar.Collapse className="me-100" id="responsive-navbar-nav">
+                    <Nav className="">
+                        <Nav.Link className="" aria-current="page" href="#">Home</Nav.Link>
+                        <Nav.Link className="" href="#about">About</Nav.Link>
+                        <Nav.Link className="" href="#projects">Projects</Nav.Link>
+                        {/* <div> */}
                         <a href="https://www.linkedin.com/in/julian-jernigan813/" target='blank'>
                             <FontAwesomeIcon className='icon' icon={faLinkedin} />
                         </a>
                         <a href="https://github.com/Job85" target='blank'>
                             <FontAwesomeIcon className='icon' icon={faGithub} />
                         </a>
-                    </div>
-                </div>
-            </div>
-        </nav>
-        //    <nav className="navbar navbar-light bg-light">
-        //         <div className="container-fluid">
-        //             <div className="container">
-        //                 <a className="navbar-brand">
-        //                     <img src={logo} alt="" height="100rem" width="100rem" />
-        //                 </a>
-        //             </div>
-        //             <div className="navbar-nav">
-        //                 <a href="#">Home</a>
-        //                 <a href="about">About</a>
-        //                 <a href="projects">Projects</a>
-        //             </div>
-        //         </div>
-        //     </nav>
+                        {/* </div> */}
+                    </Nav>
+                </Navbar.Collapse>
+            </Container>
+        </Navbar>
     )
 }
 
