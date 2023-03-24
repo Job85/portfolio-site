@@ -9,7 +9,6 @@ const Hero = () => {
     return (
         <div>
             <div className="hero">
-                {/* <NavBar /> */}
                 <Home />
             </div>
             <div className="page">
