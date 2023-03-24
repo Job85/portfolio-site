@@ -1,26 +1,33 @@
-.card-wrapper {
-    width: inherit !important;
-}
-
 .flip-card {
     background-color: transparent;
-    width: inherit;
-    height: 300px;
-    // border: 1px solid black;
-    margin-top: 2rem;
+    width: 75%;
+    margin-bottom: 5rem;
     perspective: 1000px;
-    background-image: radial-gradient(rgba(3, 145, 155, .2) 0%,
-            rgba(3, 145, 155, .5) 50%,
-            rgba(3, 145, 155, 1) 100%);
+    background: linear-gradient(222deg,
+            rgb(190, 18, 251, .6) 0%,
+            rgb(18, 195, 251, .6) 75%);
+    // rgb(79, 251, 18) 100%);
+    // background-color: #03919b;
+    border: solid #FB4A12 1px;
+
+    @media screen and (min-width: 280px) {
+        width: 100%;
+    }
+
+    @media screen and (min-width: 992px) {
+        width: 50%;
+    }
 }
 
 .flip-title {
     margin-bottom: 0 !important;
+    color: #4ffb12;
+
 }
 
 .flip-card-outer {
     width: 100%;
-    height: 100%;
+    // height: inherit;
 
     &.focus-trigger:focus {
         outline: 5px solid greenyellow;
@@ -29,9 +36,7 @@
 }
 
 .flip-card-inner {
-    position: relative;
     width: inherit;
-    height: inherit;
     text-align: center;
     transition: .5s linear 0.1s;
     transform-style: preserve-3d;
@@ -51,17 +56,18 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    // height: inherit;
+    --bs-card-cap-padding-y: 0;
 
     &.front {
         transform: rotateY(0);
-        background-color: #2d2d2d;
+        background-color: transparent;
         color: #fff;
     }
 
     &.back {
         transform: rotateY(180deg);
-        background-color: #fff;
+        background-color: transparent;
         color: #2d2d2d;
     }
 }
@@ -70,13 +76,27 @@
 .back {
     position: absolute;
     width: 100%;
-    height: 100%;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-    height: fit-content;
     border-radius: 10%;
 }
 
 .back {
     transform: rotateY(180deg);
+}
+
+.card-list {
+    list-style-type: none;
+}
+
+.card-details {
+    color: #4ffb12;
+}
+
+.card-link {
+    color: #4ffb12;
+}
+
+.card-header {
+    // border: solid #FB4A12 1px;
 }
