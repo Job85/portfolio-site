@@ -1,27 +1,68 @@
-#about {
-    padding-left: 8.5rem;
-    font-family: 'Lato Regular', 'Times New Roman', Times, serif;
+// #about {
+//     padding-left: 8.5rem;
+//     font-family: 'Lato Regular', 'Times New Roman', Times, serif;
 
-    @media screen and (max-width: 385px) {
-        padding-left: 1rem;
+//     @media screen and (max-width: 385px) {
+//         padding-left: 1rem;
+//     }
+
+//     @media screen and (max-width: 335px) {
+//         padding-left: 0.01rem;
+//     }
+// }
+#about {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 2rem;
+
+    .card:nth-child(1) {
+        // misc.
+        grid-area: 2 / 2 / 2 / 2;
     }
 
-    @media screen and (max-width: 335px) {
-        padding-left: 0.01rem;
+    .card:nth-child(2) {
+        // languages
+        grid-area: 1 / 1 / 1 / 1;
+    }
+
+    .card:nth-child(3) {
+        // frameworks
+        grid-area: 2 / 2 / 3 / 3;
+    }
+
+    .card:nth-child(4) {
+        // libraries
+        grid-area: 4 / 4 / 4 / 4;
+    }
+
+    .card:nth-child(5) {
+        // environments
+        grid-area: 3 / 3 / 4 / 4;
+    }
+
+    .card:nth-child(6) {
+        // databases
+        grid-area: 4 / 1 / 5 / 1;
     }
 }
 
-.about {
+
+
+.about-card {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    align-items: baseline;
     width: fit-content;
-    margin: 2rem 0 2rem 0;
+    margin: 2rem 0;
     border: transparent;
     border-radius: 50%;
     color: rgba(3, 145, 155, 1);
     background-image: radial-gradient(rgba(254, 152, 102, .2) 0%,
             rgba(254, 152, 102, .5) 50%,
             rgba(254, 152, 102, 1) 100%);
-    // background-image: radial-gradient(circle at 1rem 1rem, #5cabff, #000) // animation: Rotate 12s linear infinite;
 
     ul {
         list-style: none;
