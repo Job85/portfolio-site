@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { HashLink as Link } from 'react-router-hash-link';
+import { HashLink } from 'react-router-hash-link';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 import logo from '../assets/logo.png';
@@ -29,9 +29,9 @@ const NavBar = () => {
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse className="me-100" id="responsive-navbar-nav">
                     <Nav className="">
-                        <Nav.Link className="" aria-current="page" href="#">Home</Nav.Link>
-                        <Nav.Link className="" href="#about">About</Nav.Link>
-                        <Nav.Link className="" href="#projects">Projects</Nav.Link>
+                        <HashLink className="" aria-current="page" smooth to="#">Home</HashLink>
+                        <HashLink className="" smooth to="#about" offset={-100}>About</HashLink>
+                        <HashLink className="" smooth to="#projects" offset={-100}>Projects</HashLink>
                         {/* <div> */}
                         <a href="https://www.linkedin.com/in/julian-jernigan813/" target='blank'>
                             <FontAwesomeIcon className='icon' icon={faLinkedin} />
