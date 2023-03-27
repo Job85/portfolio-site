@@ -6,143 +6,140 @@ import React from "react";
 const About = () => {
 
     return (
-        <div id="about" className="container grid">
+        <div>
             <h1 className="header-1">What I do</h1>
-            <div className="card about-card mt-md-0 ml-md-0">
-                <div className="outline"></div>
-                <div className="card-body lang">
-                    <h3 className="card-title">
-                        Languages
-                    </h3>
-                    <ul>
-                        <li>
-                            <FontAwesomeIcon
-                                icon={faHtml5}
-                                className='small-icon'
-                            />
-                        </li>
-                        <li>
-                            <FontAwesomeIcon
-                                icon={faCss3Alt}
-                                className='small-icon'
-                            />
-                        </li>
-                        <li>
-                            <FontAwesomeIcon
-                                icon={faSquareJs}
-                                className='small-icon'
-                            />
-                        </li>
-                        <li><FontAwesomeIcon
-                            icon={faPython}
-                            className='small-icon'
-                        />
+            <div id="about" className="container">
+                <div className="card about-card mt-md-0 ml-md-0">
+                    <div className="card-body lang">
+                        <h3 className="card-title ps-4">
+                            Languages
+                        </h3>
+                        <ul>
+                            <li>
+                                <FontAwesomeIcon
+                                    icon={faHtml5}
+                                    className='small-icon'
+                                />
+                            </li>
+                            <li className="ms-n3">
+                                <FontAwesomeIcon
+                                    icon={faCss3Alt}
+                                    className='small-icon'
+                                />
+                            </li>
+                            <li>
+                                <FontAwesomeIcon
+                                    icon={faSquareJs}
+                                    className='small-icon'
+                                />
+                            </li>
+                            <li className="mt-n1 pb-2">
+                                <FontAwesomeIcon
+                                    icon={faPython}
+                                    className='small-icon'
+                                />
 
-                        </li>
-                    </ul>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-            <div className="card about-card mt-md-0 ml-md-0">
-                <div className="outline"></div>
-                <div className="card-body width-25% frame">
-                    <h3 className="card-title">
-                        Frameworks
-                    </h3>
-                    <ul>
-                        <li>
-                            <FontAwesomeIcon
-                                icon={faSass}
-                                className='small-icon'
-                            />
-                        </li>
-                        <li>
-                            <FontAwesomeIcon
-                                icon={faBootstrap}
-                                className='small-icon'
-                            />
-                        </li>
-                        <li>Express</li>
-                        <li>
-                            <FontAwesomeIcon
-                                icon={faVuejs}
-                                className='small-icon'
-                            />
-                        </li>
-                        <li>Django</li>
-                    </ul>
+                <div className="card about-card mt-md-0 ml-md-0">
+                    <div className="card-body frame">
+                        <h3 className="card-title ps-4">
+                            Frameworks
+                        </h3>
+                        <ul>
+                            <li>
+                                <FontAwesomeIcon
+                                    icon={faSass}
+                                    className='small-icon'
+                                />
+                            </li>
+                            <li className="ms-n3">
+                                <FontAwesomeIcon
+                                    icon={faBootstrap}
+                                    className='small-icon'
+                                />
+                            </li>
+                            <li>Express</li>
+                            <li className="ps-3">
+                                <FontAwesomeIcon
+                                    icon={faVuejs}
+                                    className='small-icon'
+                                />
+                            </li>
+                            <li className="ms-n1">Django</li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-            <div className="card about-card mt-md-0 ml-md-0">
-                <div className="outline"></div>
-                <div className="card-body width-25% lib">
-                    <h3 className="card-title">
-                        Libraries
-                    </h3>
-                    <ul>
-                        <li>
-                            <FontAwesomeIcon
-                                icon={faReact}
-                                className='small-icon react'
-                            />
-                        </li>
-                        <li>Sequelize</li>
-                        <li>Mongoose</li>
+                <div className="card about-card mt-md-0 ml-md-0">
+                    <div className="card-body lib">
+                        <h3 className="card-title">
+                            Libraries
+                        </h3>
+                        <ul>
+                            <li className="ms-n2">
+                                <FontAwesomeIcon
+                                    icon={faReact}
+                                    className='small-icon react'
+                                />
+                            </li>
+                            <li className="ms-n1-5">Sequelize</li>
+                            <li className="ms-n">Mongoose</li>
 
-                    </ul>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-            <div className="card about-card mt-md-0 ml-md-0">
-                <div className="outline"></div>
-                <div className="card-body width-25% env">
-                    <h3 className="card-title">
-                        Environments
-                    </h3>
-                    <ul>
-                        <li>
-                            <FontAwesomeIcon
-                                icon={faNode}
-                                className='small-icon'
-                            />
-                        </li>
-                    </ul>
+                <div className="card about-card mt-md-0 ml-md-0">
+                    <div className="card-body env">
+                        <h3 className="card-title ps-1">
+                            Environments
+                        </h3>
+                        <ul>
+                            <li>
+                                <FontAwesomeIcon
+                                    icon={faNode}
+                                    className='small-icon'
+                                />
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-            <div className="card about-card mt-md-0 ml-md-0">
-                <div className="outline"></div>
-                <div className="card-body width-25% data">
-                    <h3 className="card-title">
-                        Databases
-                    </h3>
-                    <h6>SQL</h6>
-                    <ul>
-                        <li>PostgreSQL</li>
-                    </ul>
-                    <h6>NoSQL</h6>
-                    <ul>
-                        <li>
-                            <MongoDBSlateBlue
-                                className="img-fluid mongo-db d-flex top-50 start-0"
-                                width="90"
-                                height="60"
-                            />
-                        </li>
-                    </ul>
+                <div className="card about-card mt-md-0 ml-md-0">
+                    <div className="card-body data">
+                        <h3 className="card-title ps-4">
+                            Databases
+                        </h3>
+                        <h6>SQL</h6>
+                        <ul>
+                            <li>PostgreSQL</li>
+                        </ul>
+                        <h6>NoSQL</h6>
+                        <ul>
+                            <li>
+                                <MongoDBSlateBlue
+                                    className="img-fluid mongo-db d-flex top-50 start-0"
+                                    width="90"
+                                    height="60"
+                                />
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-            <div className="card about-card mt-md-0 ml-md-0">
-                <div className="outline"></div>
-                <div className="card-body width-25% misc">
-                    <h3 className="card-title">
-                        Misc.
-                    </h3>
-                    <ul>
-                        <li>RESTful API's</li>
-                        <li>Full-stack application development</li>
-                        <li>Full C.R.U.D Operations</li>
-                        <li>Email JS</li>
-                        <li>Json Web Token</li>
-                        <li>Authentication</li>
-                    </ul>
+                <div className="card about-card mt-md-0 ml-md-0 w-100 p-2px">
+                    <div className="card-body d-flex flex-column justify-content-center">
+                        <h3 className="card-title">
+                            Misc.
+                        </h3>
+                        <ul className="">
+                            <li>RESTful API's</li>
+                            <li className="ms-n">Full-stack Development</li>
+                            <li className="ms-n">Full C.R.U.D Operations</li>
+                            <li>Email JS</li>
+                            <li className="ps-2">Json Web Token</li>
+                            <li className="ps-5">Authentication</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
