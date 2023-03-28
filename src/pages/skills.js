@@ -3,13 +3,13 @@ import { faHtml5, faCss3Alt, faSquareJs, faSass, faBootstrap, faVuejs, faReact, 
 import { ReactComponent as MongoDBSlateBlue } from '../assets/MongoDB_SlateBlue.svg';
 import React from "react";
 
-const About = () => {
+const Skills = () => {
 
     return (
-        <section id="about">
+        <section id="skills">
             <h1 className="header-1">Skills</h1>
-            <div className="container about-container">
-                <div className="card about-card mt-md-0 ml-md-0">
+            <div className="container skills-container">
+                <div className="card skills-card mt-md-0 ml-md-0">
                     <div className="card-body lang">
                         <h3 className="card-title ps-4">
                             Languages
@@ -43,7 +43,7 @@ const About = () => {
                         </ul>
                     </div>
                 </div>
-                <div className="card about-card mt-md-0 ml-md-0">
+                <div className="card skills-card mt-md-0 ml-md-0">
                     <div className="card-body frame">
                         <h3 className="card-title ps-4">
                             Frameworks
@@ -72,7 +72,7 @@ const About = () => {
                         </ul>
                     </div>
                 </div>
-                <div className="card about-card mt-md-0 ml-md-0">
+                <div className="card skills-card mt-md-0 ml-md-0">
                     <div className="card-body lib">
                         <h3 className="card-title">
                             Libraries
@@ -90,7 +90,7 @@ const About = () => {
                         </ul>
                     </div>
                 </div>
-                <div className="card about-card mt-md-0 ml-md-0">
+                <div className="card skills-card mt-md-0 ml-md-0">
                     <div className="card-body env">
                         <h3 className="card-title ps-1">
                             Environments
@@ -105,7 +105,7 @@ const About = () => {
                         </ul>
                     </div>
                 </div>
-                <div className="card about-card mt-md-0 ml-md-0">
+                <div className="card skills-card mt-md-0 ml-md-0">
                     <div className="card-body data">
                         <h3 className="card-title ps-4">
                             Databases
@@ -126,7 +126,7 @@ const About = () => {
                         </ul>
                     </div>
                 </div>
-                <div className="card about-card mt-md-0 ml-md-0 w-100 p-2px">
+                <div className="card skills-card mt-md-0 ml-md-0 w-100 p-2px">
                     <div className="card-body d-flex flex-column justify-content-center">
                         <h3 className="card-title">
                             Misc.
@@ -146,4 +146,4 @@ const About = () => {
     )
 }
 
-export default About
+export default Skills

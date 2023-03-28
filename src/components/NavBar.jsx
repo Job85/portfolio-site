@@ -41,16 +41,14 @@ const NavBar = () => {
                 <Navbar.Collapse className="me-100" id="responsive-navbar-nav">
                     <Nav className="" data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="120">
                         <Nav.Link className="" onClick={() => scrollToSection("home")}>Home</Nav.Link>
-                        <Nav.Link className="" onClick={() => scrollToSection("about")}>About</Nav.Link>
+                        <Nav.Link className="" onClick={() => scrollToSection("skills")}>Skills</Nav.Link>
                         <Nav.Link className="" onClick={() => scrollToSection("projects")}>Projects</Nav.Link>
-                        {/* <div> */}
                         <a href="https://www.linkedin.com/in/julian-jernigan813/" target='blank'>
                             <FontAwesomeIcon className='icon' icon={faLinkedin} />
                         </a>
                         <a href="https://github.com/Job85" target='blank'>
                             <FontAwesomeIcon className='icon' icon={faGithub} />
                         </a>
-                        {/* </div> */}
                     </Nav>
                 </Navbar.Collapse>
             </Container>

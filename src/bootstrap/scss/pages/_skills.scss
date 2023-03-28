@@ -1,4 +1,4 @@
-.about-container {
+.skills-container {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(4, 1fr);
@@ -104,7 +104,7 @@
 
 
 
-.about-card {
+.skills-card {
     border: transparent;
     border-radius: 50%;
     color: rgba(18, 195, 251, 1);
