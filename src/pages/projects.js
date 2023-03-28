@@ -5,13 +5,13 @@ import cards from "../components/Card/cards";
 const Projects = () => {
 
     return (
-        <div id="projects">
+        <section id="projects">
             <div className="card-wrapper">
                 {cards.map((card) =>
                     <PCard key={card.id} card={card} />
                 )}
             </div>
-        </div>
+        </section>
     )
 }
 

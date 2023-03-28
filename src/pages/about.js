@@ -6,9 +6,9 @@ import React from "react";
 const About = () => {
 
     return (
-        <div>
+        <section id="about">
             <h1 className="header-1">What I do</h1>
-            <div id="about" className="container">
+            <div className="container about-container">
                 <div className="card about-card mt-md-0 ml-md-0">
                     <div className="card-body lang">
                         <h3 className="card-title ps-4">
@@ -142,7 +142,7 @@ const About = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 

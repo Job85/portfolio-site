@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { HashLink } from 'react-router-hash-link';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 import logo from '../assets/logo.png';
@@ -20,18 +19,30 @@ const NavBar = () => {
 
     window.addEventListener('scroll', changeNavbarColor);
 
+    const scrollToSection = (id) => {
+        const element = document.getElementById(id);
+        const yOffset = -180;
+        const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+        window.scrollTo({ top: y, behavior: 'smooth' });
+    };
+
     return (
-        <Navbar collapseOnSelect expand='lg' className={colorChange ? 'pt-3 pb-0 sticky-top colorChange' : 'pt-3 pb-0 sticky-top'}>
+        <Navbar
+            collapseOnSelect expand='lg'
+            className={colorChange ? 'pt-3 pb-0 sticky-top colorChange' : 'pt-3 pb-0 sticky-top'}
+            id="navbar"
+        >
             <Container className="me-100">
                 <Navbar.Brand className="" href="#">
                     <img src={logo} alt="" className="logo" />
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse className="me-100" id="responsive-navbar-nav">
-                    <Nav className="">
-                        <HashLink className="" aria-current="page" smooth to="#">Home</HashLink>
-                        <HashLink className="" smooth to="#about" offset={-100}>About</HashLink>
-                        <HashLink className="" smooth to="#projects" offset={-100}>Projects</HashLink>
+                    <Nav className="" data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="120">
+                        <Nav.Link className="" onClick={() => scrollToSection("home")}>Home</Nav.Link>
+                        <Nav.Link className="" onClick={() => scrollToSection("about")}>About</Nav.Link>
+                        <Nav.Link className="" onClick={() => scrollToSection("projects")}>Projects</Nav.Link>
                         {/* <div> */}
                         <a href="https://www.linkedin.com/in/julian-jernigan813/" target='blank'>
                             <FontAwesomeIcon className='icon' icon={faLinkedin} />

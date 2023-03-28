@@ -5,7 +5,7 @@ import Email from "../components/Email";
 const Home = () => {
 
     return (
-        <div id="home" className="container mt-5 pt-5 pt-sm-0">
+        <section id="home" className="container mt-5 pt-5 pt-sm-0">
             <div className="row">
                 <div className="col">
                     <h1 className="heading">
@@ -29,7 +29,7 @@ const Home = () => {
                     </h2>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 
