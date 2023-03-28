@@ -21,7 +21,6 @@ const FirefliesBackground = () => {
             this.vy = Math.random() * 4 - 1;
             this.opacity = 1;
             this.color = ["rgb(190, 18, 251)", "rgb(18, 195, 251)", "rgb(79, 251, 18)"][Math.floor(Math.random() * 3)];
-            console.log(this.color);
         }
 
         Firefly.prototype.update = function () {

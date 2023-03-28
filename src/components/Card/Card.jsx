@@ -29,11 +29,9 @@ const PCard = ({ card }) => {
     const cardRef = useRef(null);
 
     const [backHeight, setBackHeight] = useState(0);
-    console.log(backHeight)
 
     useEffect(() => {
         const height = backRef.current.offsetHeight;
-        console.log(height);
         if (height !== backHeight) {
             setBackHeight(height);
         }
