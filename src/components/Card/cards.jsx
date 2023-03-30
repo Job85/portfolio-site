@@ -59,10 +59,10 @@ const cards = [
             <Card.Link
                 style={{ color: '#4ffb12' }}
                 className="card-link"
-                href="https://token-huntr-app.web.app/"
+                href="https://restaurant-inventory-77229.web.app/"
                 target="blank"
             >
-                @Token Huntr
+                @Restaurant-Inventory
             </Card.Link>,
         details:
             <div className="card-details">
