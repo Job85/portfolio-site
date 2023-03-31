@@ -75,17 +75,21 @@ const PCard = ({ card }) => {
                         <div
                             ref={backRef}
                             style={{ height: 'fit-content' }}
-                            className="p-card back">
+                            className="p-card back"
+                        >
                             {card.back}
                             <h3
                                 className="card-details"
                             >
-                                Technologies</h3>
+                                Technologies
+                            </h3>
                             {card.details}
                             <div className="d-flex ps-4">
                                 <h5
                                     style={{ color: '#4ffb12' }}
-                                    className="pe-3">Website</h5>
+                                    className="pe-3">
+                                    Website
+                                </h5>
                                 <div
                                     style={{ color: '#4ffb12' }}
                                 >
