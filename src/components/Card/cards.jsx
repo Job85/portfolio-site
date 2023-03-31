@@ -24,6 +24,25 @@ const cards = [
             >
                 @Token Huntr
             </Card.Link>,
+        gitHub:
+            <Card.Link
+                style={{ color: '#4ffb12' }}
+                className="card-link"
+                href="https://github.com/Job85/token-huntr-app"
+                target="blank"
+            >
+                GitHub Front-End
+            </Card.Link>,
+        gitHub2:
+            <Card.Link
+                style={{ color: '#4ffb12' }}
+                className="card-link"
+                href="https://github.com/Job85/token-huntr"
+                target="blank"
+            >
+                GitHub Back-End
+            </Card.Link>
+        ,
         details:
             <div className="card-details">
                 <h6 className="card-header">Languages</h6>
@@ -59,11 +78,30 @@ const cards = [
             <Card.Link
                 style={{ color: '#4ffb12' }}
                 className="card-link"
-                href="https://restaurant-inventory-77229.web.app/"
+                href="https://restaurant-inventory-77229.web.app"
                 target="blank"
             >
                 @Restaurant-Inventory
             </Card.Link>,
+        gitHub:
+            <Card.Link
+                style={{ color: '#4ffb12' }}
+                className="card-link"
+                href="https://github.com/Job85/Restaurant-Inventory-App"
+                target="blank"
+            >
+                GitHub Front-End
+            </Card.Link>,
+        gitHub2:
+            <Card.Link
+                style={{ color: '#4ffb12' }}
+                className="card-link"
+                href="https://github.com/Job85/inventory-app-backend"
+                target="blank"
+            >
+                GitHub Back-End
+            </Card.Link>
+        ,
         details:
             <div className="card-details">
                 <h6 className="card-header">Languages</h6>

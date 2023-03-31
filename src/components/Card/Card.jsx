@@ -96,6 +96,26 @@ const PCard = ({ card }) => {
                                     {card.link}
                                 </div>
                             </div>
+                            {card.gitHub || card.gitHub2 ? (
+                                <div className="d-flex ps-4">
+                                    <h5
+                                        style={{ color: '#4ffb12' }}
+                                        className="pe-3">
+                                        Source Code
+                                    </h5>
+                                    <div
+                                        style={{ color: '#4ffb12' }}
+                                    >
+                                        {card.gitHub}
+                                        {card.gitHub2}
+                                    </div>
+                                </div>
+                            ) : <div
+                                className="d-flex ps-4"
+                                style={{ color: '#4ffb12' }}
+                            >
+                                Client Website Source Code Private
+                            </div>}
                         </div>
                     </div>
                 </div>
