@@ -46,7 +46,7 @@ const cards = [
         details:
             <div className="card-details">
                 <h6 className="card-header">Languages</h6>
-                <ul className="list-wrapper">
+                <ul className="list-wrapper d-flex flex-column justify-content-start">
                     <li className="card-list">CSS</li>
                     <li className="card-list">JavaScript</li>
                 </ul>
@@ -103,8 +103,12 @@ const cards = [
             </Card.Link>
         ,
         details:
-            <div className="card-details">
-                <h6 className="card-header">Languages</h6>
+            <div className="card-details d-flex flex-column align-content-center">
+                <h6
+                    className="card-header d-flex flex-column justify-content-center"
+                    style={{ width: '50%' }}
+                >Languages
+                </h6>
                 <ul className="list-wrapper">
                     <li className="card-list">CSS</li>
                     <li className="card-list">JavaScript</li>

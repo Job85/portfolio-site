@@ -87,6 +87,22 @@
 
 .card-details {
     color: #4ffb12;
+
+    h6 {
+        width: 50%;
+        text-align: center;
+        margin-left: 25%;
+    }
+
+    ul {
+        width: 50%;
+        text-align: left;
+        margin-left: 40%;
+    }
+
+    li {
+        align-items: baseline;
+    }
 }
 
 .card-link {
