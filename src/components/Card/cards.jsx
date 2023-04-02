@@ -4,6 +4,29 @@ import qc from "../../assets/QCDetailing.png";
 import { Card } from "react-bootstrap";
 // styled from _card.scss
 
+const text1 = "A web app for the adventerous to go Geo Caching. Using REST API's users have the ability to perform full CRUD of the locations model. \n Click to flip card"
+const text2 = "A web app for the hospitality industry designed to streamline the inventory process. Using REST API's users have the ability to perform full CRUD of the items model. \n Click to flip card"
+const text3 = "A website built for a client per their details and with UX and UI design standards per my suggestions. \n Click to flip card"
+
+let newText1 = text1.split('\n').map(i => {
+    return <p style={{ color: '#4ffb12' }}
+    >
+        {i}
+    </p>
+})
+let newText2 = text2.split('\n').map(i => {
+    return <p style={{ color: '#4ffb12' }}
+    >
+        {i}
+    </p>
+})
+let newText3 = text3.split('\n').map(i => {
+    return <p style={{ color: '#4ffb12' }}
+    >
+        {i}
+    </p>
+})
+
 const cards = [
     {
         id: "1",
@@ -15,6 +38,8 @@ const cards = [
             style={{ width: "inherit" }}
         />,
         title: "Token Huntr",
+        paragraph:
+            newText1,
         link:
             <Card.Link
                 style={{ color: '#4ffb12' }}
@@ -74,6 +99,8 @@ const cards = [
                 style={{ width: "inherit" }}
             />,
         title: 'Inventory App',
+        paragraph:
+            newText2,
         link:
             <Card.Link
                 style={{ color: '#4ffb12' }}
@@ -136,6 +163,8 @@ const cards = [
                 style={{ width: "inherit" }}
             />,
         title: 'Quality Cleaners Detailing',
+        paragraph:
+            newText3,
         link:
             <Card.Link
                 style={{ color: '#4ffb12' }}

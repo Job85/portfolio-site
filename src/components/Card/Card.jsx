@@ -71,6 +71,7 @@ const PCard = ({ card }) => {
                             variant="click"
                         >
                             {card.front}
+                            {card.paragraph}
                         </div>
                         <div
                             ref={backRef}
