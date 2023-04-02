@@ -1,6 +1,8 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHtml5, faCss3Alt, faSquareJs, faSass, faBootstrap, faVuejs, faReact, faNode, faPython } from "@fortawesome/free-brands-svg-icons";
 import { ReactComponent as MongoDBSlateBlue } from '../assets/MongoDB_SlateBlue.svg';
+import { ReactComponent as PostgreSQL } from '../assets/postgresql.svg';
+import { ReactComponent as Sequelize } from '../assets/sequelize.svg';
 import React from "react";
 
 const Skills = () => {
@@ -84,7 +86,13 @@ const Skills = () => {
                                     className='small-icon react'
                                 />
                             </li>
-                            <li className="ms-n1-5">Sequelize</li>
+                            <li className="ms-n1-5">
+                                <Sequelize
+                                    className="img-fluid"
+                                    width="50"
+                                    height="50"
+                                />
+                            </li>
                             <li className="ms-n">Mongoose</li>
 
                         </ul>
@@ -105,20 +113,26 @@ const Skills = () => {
                         </ul>
                     </div>
                 </div>
-                <div className="card skills-card mt-md-0 ml-md-0">
+                <div className="card skills-card ps-5 mt-md-0 ml-md-0">
                     <div className="card-body data">
                         <h3 className="card-title ps-4">
                             Databases
                         </h3>
-                        <h6>SQL</h6>
+                        <h6 className="p-4">SQL</h6>
                         <ul>
-                            <li>PostgreSQL</li>
+                            <li>
+                                <PostgreSQL
+                                    className="img-fluid"
+                                    width="150"
+                                    height="150"
+                                />
+                            </li>
                         </ul>
-                        <h6>NoSQL</h6>
+                        <h6 className="p-4">NoSQL</h6>
                         <ul>
                             <li>
                                 <MongoDBSlateBlue
-                                    className="img-fluid mongo-db d-flex top-50 start-0"
+                                    className="img-fluid"
                                     width="90"
                                     height="60"
                                 />
@@ -128,7 +142,7 @@ const Skills = () => {
                 </div>
                 <div className="card skills-card mt-md-0 ml-md-0 w-100 p-2px">
                     <div className="card-body d-flex flex-column justify-content-center">
-                        <h3 className="card-title">
+                        <h3 className="card-title ps-4">
                             Misc.
                         </h3>
                         <ul className="">
