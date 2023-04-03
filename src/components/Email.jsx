@@ -23,8 +23,11 @@ const Email = () => {
         e.preventDefault();
         emailjs.sendForm(serviceID, templateID, form.current, publicKey)
             .then((result) => {
+                alert('Email sent successfully!');
+                setShowForm(false);
                 console.log(result.text);
             }, (error) => {
+                alert('Email failed to send!')
                 console.log(error.text);
             });
     };
@@ -53,10 +56,13 @@ const Email = () => {
                             <form
                                 ref={form}
                                 onSubmit={sendEmail}
-                                className="modal-form"
+                            // className="modal-form pt-4"
                             >
-                                <label>Name</label>
-                                <input type="text" name="from_name" />
+                                <label className="pt-3 d-flex">Name</label>
+                                <input
+                                    type="text"
+                                    name="from_name"
+                                />
                                 <label>Message</label>
                                 <textarea name="message" />
                                 <label>Contact Email or Phone</label>
