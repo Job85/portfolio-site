@@ -42,35 +42,45 @@ const Email = () => {
                 Get In Touch!
             </button>
             {showForm && (
-                <div className="modal" tabIndex={-1}>
-                    <div className="modal-dialog">
-                        <div className="modal-content">
-                            <div className="modal-header">
-                                <h2 className="modal-title">Contact Form</h2>
-                                <button
-                                    onClick={handleFormClose}
-                                    type="button"
-                                    className="btn-close"
-                                    aria-label="Close"></button>
-                            </div>
-                            <form
-                                ref={form}
-                                onSubmit={sendEmail}
-                            // className="modal-form pt-4"
-                            >
-                                <label className="pt-3 d-flex">Name</label>
-                                <input
-                                    type="text"
-                                    name="from_name"
-                                />
-                                <label>Message</label>
-                                <textarea name="message" />
-                                <label>Contact Email or Phone</label>
-                                <textarea type="text" name="contact_us" />
-                                <div className="modal-footer">
-                                    <button type="submit">Send</button>
+                <div className="container">
+                    <div className="modal" tabIndex={-1}>
+                        <div className="modal-dialog">
+                            <div className="modal-content">
+                                <div className="modal-header">
+                                    <h2 className="modal-title">Contact Form</h2>
+                                    <button
+                                        onClick={handleFormClose}
+                                        type="button"
+                                        className="btn-close"
+                                        aria-label="Close"></button>
                                 </div>
-                            </form>
+                                <form
+                                    ref={form}
+                                    onSubmit={sendEmail}
+                                // className="modal-form pt-4"
+                                >
+                                    <label className="pt-3 d-flex">Name</label>
+                                    <input
+                                        className="form-control"
+                                        type="text"
+                                        name="from_name"
+                                    />
+                                    <label className="pt-2">Message</label>
+                                    <textarea
+                                        className="form-control"
+                                        name="message"
+                                    />
+                                    <label className="pt-2">Contact Email or Phone</label>
+                                    <textarea
+                                        className="form-control"
+                                        type="text"
+                                        name="contact_us"
+                                    />
+                                    <div className="modal-footer">
+                                        <button type="submit">Send</button>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
