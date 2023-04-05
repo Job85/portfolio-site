@@ -10,7 +10,7 @@ import '../bootstrap/scss/layout/_navigation.scss';
 const NavBar = () => {
     const [colorChange, setColorChange] = useState(false);
     const changeNavbarColor = () => {
-        if (window.scrollY >= 40) {
+        if (window.scrollY >= 10) {
             setColorChange(true);
         } else {
             setColorChange(false);
