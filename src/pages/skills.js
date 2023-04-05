@@ -118,18 +118,18 @@ const Skills = () => {
                         <h3 className="card-title ps-4">
                             Databases
                         </h3>
-                        <h6 className="p-4">SQL</h6>
-                        <ul>
+                        <h6 className="pt-4">SQL</h6>
+                        <ul className="ps-0">
                             <li>
                                 <PostgreSQL
                                     className="img-fluid"
-                                    width="150"
-                                    height="150"
+                                    width="90"
+                                    height="90"
                                 />
                             </li>
                         </ul>
-                        <h6 className="p-4">NoSQL</h6>
-                        <ul>
+                        <h6 className="pt-3 mb-0">NoSQL</h6>
+                        <ul className="mongo">
                             <li>
                                 <MongoDBSlateBlue
                                     className="img-fluid"

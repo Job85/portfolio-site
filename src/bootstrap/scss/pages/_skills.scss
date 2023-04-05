@@ -83,8 +83,18 @@
             grid-area: 5 / 2 / 5 / 4;
         }
 
-        @media screen and (max-width: 480px) {
-            grid-area: 5 / 2 / 5 / 5;
+        @media screen and (max-width: 498px) {
+            grid-area: 5 / 1 / 5 / 5;
+        }
+
+        @media screen and (max-width: 340px) {
+            h3 {
+                padding-left: 0 !important;
+            }
+
+            .mongo {
+                padding-left: 0 !important;
+            }
         }
     }
 
