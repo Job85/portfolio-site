@@ -188,8 +188,6 @@ const cards = [
                     <li className="card-list">Axios</li>
                     <li className="card-list">Font Awesome</li>
                 </ul>
-                <h6 className="card-header">Database</h6>
-                <ul className="card-list">PostgreSQL</ul>
             </div>
     }
 ];
