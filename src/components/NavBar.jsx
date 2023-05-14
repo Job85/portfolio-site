@@ -22,7 +22,7 @@ const NavBar = () => {
 
     const scrollToSection = (id) => {
         const element = document.getElementById(id);
-        const yOffset = -180;
+        const yOffset = -275;
         const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
 
         window.scrollTo({ top: y, behavior: 'smooth' });
