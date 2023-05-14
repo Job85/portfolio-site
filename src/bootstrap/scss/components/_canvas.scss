@@ -1,0 +1,12 @@
+.scene {
+    width: 200px;
+    height: 200px;
+}
+
+.canvas {
+    background: transparent;
+}
+
+.canvas>canvas {
+    display: flex !important;
+}

@@ -5,6 +5,7 @@ import logo from '../assets/logo.png';
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav'
+import LogoCanvas from "./LogoCanvas";
 import '../bootstrap/scss/layout/_navigation.scss';
 
 const NavBar = () => {
@@ -33,9 +34,9 @@ const NavBar = () => {
             className={colorChange ? 'pt-3 pb-0 sticky-top colorChange' : 'pt-3 pb-0 sticky-top'}
             id="navbar"
         >
-            <Container className="me-100">
+            <Container className="d-flex justify-items-center me-100">
                 <Navbar.Brand className="" href="#">
-                    <img src={logo} alt="" className="logo" />
+                    <LogoCanvas />
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse className="me-100" id="responsive-navbar-nav">

@@ -13,7 +13,7 @@ const Hero = () => {
                 <Home />
             </div>
             <div className="page">
-                <FirefliesBackground />
+                {/* <FirefliesBackground /> */}
                 <Skills />
                 <Projects />
             </div>
