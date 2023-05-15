@@ -4,14 +4,14 @@ import { useThree } from "@react-three/fiber";
 import TextSphere from "./TextSphere";
 
 const LanguageScene = () => {
-    const { viewport } = useThree();
-    const sphereDistance = viewport.width < 600 ? 10.5 : 20;
+    const { size: { width: canvasWidth } } = useThree();
+    const sphereDistance = canvasWidth < 480 ? 10.5 : 20;
 
     return (
         <Suspense fallback={null}>
-            <TextSphere position={[0, 0, sphereDistance]} text="HTML5" />
+            <TextSphere position={[0, 0, `${sphereDistance}`]} text="HTML5" />
             <TextSphere position={[0, 0, 0]} text="CSS3" />
-            <TextSphere position={[0, 0, -sphereDistance]} text="JavaScript" />
+            <TextSphere position={[0, 0, `-${sphereDistance}`]} text="JavaScript" />
         </Suspense>
     )
 }
