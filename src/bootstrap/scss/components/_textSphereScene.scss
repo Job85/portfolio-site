@@ -1,0 +1,13 @@
+.scene {
+    width: 100%;
+    height: 400px;
+}
+
+.canvas {
+    background: transparent;
+
+}
+
+.canvas>canvas {
+    display: flex !important;
+}
