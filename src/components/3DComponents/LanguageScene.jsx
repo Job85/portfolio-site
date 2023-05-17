@@ -17,20 +17,20 @@ const LanguageScene = () => {
             <TextSphere
                 position={[0, 0, `${sphereDistance}`]}
                 text="HTML5"
-                color1={"#12c3fb"}
-                color2={"#be12fb"}
+                colors={['#12c3fb', '#be12fb', '#4ffb12']}
+                stops={[0.2, 0.5, 1.0]}
             />
             <TextSphere
                 position={[0, 0, 0]}
                 text="CSS3"
-                color1={"#12c3fb"}
-                color2={"#4ffb12"}
+                colors={['#be12fb', '#4ffb12', '#12c3fb']}
+                stops={[0.2, 0.5, 1.0]}
             />
             <TextSphere
                 position={[0, 0, `-${sphereDistance}`]}
                 text="JavaScript"
-                color1={"#4ffb12"}
-                color2={"#be12fb"}
+                colors={['#4ffb12', '#12c3fb', '#be12fb']}
+                stops={[0.2, 0.5, 1.0]}
             />
         </Suspense>
     )

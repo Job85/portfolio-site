@@ -1,9 +1,10 @@
 import React, { useMemo, useRef, useState, useEffect } from 'react';
 import { useFrame, useThree } from '@react-three/fiber';
+import { GradientTexture } from '@react-three/drei';
 import * as THREE from 'three';
 import TextTexture from './TextTexture';
 
-const TextSphere = ({ text, position, color1, color2 }) => {
+const TextSphere = ({ text, position, color1, color2, colors, stops }) => {
     const { viewport } = useThree();
 
     const [sphereGeometryArgs, setSphereGeometryArgs] = useState([9, 31, 31]);
@@ -24,46 +25,11 @@ const TextSphere = ({ text, position, color1, color2 }) => {
         text: textHtml,
     });
 
-    const shaderMaterial = new THREE.ShaderMaterial({
-        uniforms: {
-            uColor1: { value: new THREE.Color(color1) },
-            uColor2: { value: new THREE.Color(color2) },
-            uAlpha: { value: 0.6 },
-            uTime: { value: 0.0 },
-            uTexture: { value: textTexture },
-        },
-        vertexShader: `
-          varying vec2 vUv;
-          varying vec3 vPosition;
-
-          void main() {
-            vUv = uv;
-            vPosition = position;
-            gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
-          }
-        `,
-        fragmentShader: `
-        uniform vec3 uColor1;
-        uniform vec3 uColor2;
-        uniform float uAlpha;
-        uniform float uTime;
-        uniform sampler2D uTexture;
-
-        varying vec2 vUv;
-        varying vec3 vPosition;
-
-            void main() {
-                vec3 textColor = vec3(1.0, 1.0, 1.0);
-                vec3 interpolatedColor = mix(uColor1, uColor2, vUv.y);
-                gl_FragColor = vec4(interpolatedColor * textColor, uAlpha);
-            }
-        `,
-    });
-
     const textMaterial = new THREE.MeshBasicMaterial({
         map: textTexture,
         transparent: true,
         opacity: 1,
+        color: 'red'
     });
 
     const groupRef = useRef();
@@ -74,8 +40,14 @@ const TextSphere = ({ text, position, color1, color2 }) => {
 
     return (
         <group position={position} ref={groupRef}>
-            <mesh material={shaderMaterial}>
+            <mesh>
                 <sphereGeometry args={sphereGeometryArgs} />
+                <meshStandardMaterial>
+                    <GradientTexture
+                        stops={stops}
+                        colors={colors}
+                    />
+                </meshStandardMaterial>
             </mesh>
             <mesh material={textMaterial}>
                 <sphereGeometry args={sphereGeometryArgs} />
