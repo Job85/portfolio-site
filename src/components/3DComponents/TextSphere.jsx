@@ -4,7 +4,7 @@ import { GradientTexture } from '@react-three/drei';
 import * as THREE from 'three';
 import TextTexture from './TextTexture';
 
-const TextSphere = ({ text, position, color1, color2, colors, stops }) => {
+const TextSphere = ({ text, position, colors, stops }) => {
     const { viewport } = useThree();
 
     const [sphereGeometryArgs, setSphereGeometryArgs] = useState([9, 31, 31]);
@@ -25,7 +25,7 @@ const TextSphere = ({ text, position, color1, color2, colors, stops }) => {
         text: textHtml,
     });
 
-    const textMaterial = new THREE.MeshBasicMaterial({
+    const textMaterial = new THREE.MeshStandardMaterial({
         map: textTexture,
         transparent: true,
         opacity: 1,
