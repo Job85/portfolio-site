@@ -111,6 +111,13 @@ const LanguageScene = () => {
                 rotation={[-Math.PI / 2, 0, 0]}
                 color={'grey'}
             />
+            <Platform
+                position={[-12.5, 0, 0]}
+                width={65}
+                height={25}
+                rotation={[0, Math.PI / 2, 0]}
+                color={'grey'}
+            />
         </Suspense>
     );
 };
