@@ -6,7 +6,7 @@ import lato from "../../fonts/Lato_Regular.json";
 
 extend({ TextGeometry })
 
-const LanguageBanner = ({ position, rotation }) => {
+const LanguageBanner = ({ position, rotation, color }) => {
 
     const font = new FontLoader().parse(lato);
 
@@ -20,8 +20,8 @@ const LanguageBanner = ({ position, rotation }) => {
             />
             <meshStandardMaterial
                 attach='material'
-                color={'#a6d0e7'}
-                emissive={'#467892'}
+                color={color}
+                emissive={'red'}
                 roughness={0}
                 metalness={1}
 
