@@ -16,7 +16,8 @@ const LanguageBanner = ({ position, rotation }) => {
             rotation={rotation}
         >
             <textGeometry
-                args={['Languages', { font, size: 3, height: 1.5, curveSegments: 8 }]} />
+                args={['Languages', { font, size: 3, height: 1.5, curveSegments: 8 }]}
+            />
             <meshStandardMaterial
                 attach='material'
                 color={'#a6d0e7'}
