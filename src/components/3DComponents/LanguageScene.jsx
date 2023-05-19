@@ -3,7 +3,7 @@ import { useThree } from "@react-three/fiber";
 import TextSphere from "./TextSphere";
 import { useHelper } from "@react-three/drei";
 import * as THREE from "three";
-import LanguageBanner from "./LanguageBanner";
+import LanguageBanner from "./Banner";
 import Platform from "./Platform";
 // import * as THREE from "three";
 
@@ -52,6 +52,7 @@ const LanguageScene = () => {
                 position={[0, 10, 10]}
                 rotation={[0, Math.PI / 2, 0]}
                 color={"red"}
+                text={'Languages'}
             />
             <TextSphere
                 position={[0, 0, sphereDistance]}
