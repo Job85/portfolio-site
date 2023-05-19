@@ -25,8 +25,6 @@ const LanguageCanvas = ({ text }) => {
                     intensity={0.3}
                     color={0xEEEDC9}
                 />
-                <OrbitControls enableRotate={true} enablePan={true} enableZoom={true} />
-                {/* <Draggable /> */}
             </Canvas>
         </div>
     )
