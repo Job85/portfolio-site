@@ -6,7 +6,7 @@ import "../bootstrap/scss/components/_canvas.scss";
 const LogoCanvas = () => {
 
     return (
-        <div className="scene">
+        <div className="scene2">
             <Canvas
                 shadows
                 className="canvas"
