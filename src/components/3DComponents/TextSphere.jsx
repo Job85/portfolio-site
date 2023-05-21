@@ -4,7 +4,7 @@ import { GradientTexture } from '@react-three/drei';
 import * as THREE from 'three';
 import TextTexture from './TextTexture';
 
-const TextSphere = ({ text, position, colors, stops }) => {
+const TextSphere = ({ sphereText, position, colors, stops }) => {
     const { viewport } = useThree();
 
     const [sphereGeometryArgs, setSphereGeometryArgs] = useState([9, 31, 31]);
@@ -19,7 +19,7 @@ const TextSphere = ({ text, position, colors, stops }) => {
         }
     }, [viewport]);
 
-    const textHtml = useMemo(() => `<div>${text}</div>`, [text]);
+    const textHtml = useMemo(() => `<div>${sphereText}</div>`, [sphereText]);
 
     const textTexture = TextTexture({
         text: textHtml,

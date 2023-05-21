@@ -6,7 +6,7 @@ import lato from "../../fonts/Lato_Regular.json";
 
 extend({ TextGeometry })
 
-const Banner = ({ position, rotation, color, text }) => {
+const Banner = ({ position, rotation, color, bannerText }) => {
 
     const font = new FontLoader().parse(lato);
 
@@ -16,7 +16,7 @@ const Banner = ({ position, rotation, color, text }) => {
             rotation={rotation}
         >
             <textGeometry
-                args={[`${text}`, { font, size: 3, height: 1.5, curveSegments: 8 }]}
+                args={[`${bannerText}`, { font, size: 3, height: 1.5, curveSegments: 8 }]}
             />
             <meshStandardMaterial
                 attach='material'

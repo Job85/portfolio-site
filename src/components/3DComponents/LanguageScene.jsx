@@ -52,23 +52,23 @@ const LanguageScene = () => {
                 position={[0, 10, 10]}
                 rotation={[0, Math.PI / 2, 0]}
                 color={"red"}
-                text={'Languages'}
+                bannerText={'Languages'}
             />
             <TextSphere
                 position={[0, 0, sphereDistance]}
-                text="HTML5"
+                sphereText="HTML5"
                 colors={["#be12fb", "#12c3fb", "#4ffb12"]}
                 stops={[0.2, 0.5, 1.0]}
             />
             <TextSphere
                 position={[0, 0, 0]}
-                text="CSS3"
+                sphereText="CSS3"
                 colors={["#be12fb", "#4ffb12", "#12c3fb"]}
                 stops={[0.2, 0.5, 1.0]}
             />
             <TextSphere
                 position={[0, 0, -sphereDistance]}
-                text="JavaScript"
+                sphereText="JavaScript"
                 colors={["#4ffb12", "#12c3fb", "#be12fb"]}
                 stops={[0.2, 0.5, 1.0]}
             />
