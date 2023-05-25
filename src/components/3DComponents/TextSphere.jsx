@@ -35,7 +35,7 @@ const TextSphere = ({ sphereText, position, colors, stops }) => {
     const groupRef = useRef();
 
     useFrame(() => {
-        groupRef.current.rotation.y += 0.009;
+        groupRef.current.rotation.y += 0.019;
     });
 
     return (
@@ -50,6 +50,9 @@ const TextSphere = ({ sphereText, position, colors, stops }) => {
                 </meshStandardMaterial>
             </mesh>
             <mesh material={textMaterial}>
+                <sphereGeometry args={sphereGeometryArgs} />
+            </mesh>
+            <mesh material={textMaterial} rotation={[0, Math.PI, 0]}>
                 <sphereGeometry args={sphereGeometryArgs} />
             </mesh>
         </group>

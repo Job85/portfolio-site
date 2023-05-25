@@ -1,7 +1,7 @@
 import { useMemo } from 'react'
 import * as THREE from 'three'
 
-const TextTexture = ({ text, fontSize = 120 }) => {
+const TextTexture = ({ text, fontSize = 90 }) => {
     const parser = new DOMParser();
     const doc = parser.parseFromString(text, 'text/html');
     const html = doc.body.firstChild;
