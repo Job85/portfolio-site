@@ -9,8 +9,13 @@
     position: relative;
 }
 
+.scene3 {
+    width: 100vw;
+    height: 100vh;
+}
+
 .canvas {
-    background: transparent;
+    background: #000;
 }
 
 .canvas>canvas {

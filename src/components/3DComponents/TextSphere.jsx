@@ -32,14 +32,14 @@ const TextSphere = ({ sphereText, position, colors, stops }) => {
         color: 'red'
     });
 
-    const groupRef = useRef();
+    // const groupRef = useRef();
 
-    useFrame(() => {
-        groupRef.current.rotation.y += 0.019;
-    });
+    // useFrame(() => {
+    //     groupRef.current.rotation.y += 0.019;
+    // });
 
     return (
-        <group position={position} ref={groupRef}>
+        <group position={position}>
             <mesh>
                 <sphereGeometry args={sphereGeometryArgs} />
                 <meshStandardMaterial>

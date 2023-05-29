@@ -1,4 +1,4 @@
-import React, { Suspense, useRef, useEffect, useState } from "react";
+import React, { Suspense, useRef, useEffect, useState, forwardRef } from "react";
 import { useThree, useFrame } from "@react-three/fiber";
 import { useControls } from "leva";
 import TextSphere from "./TextSphere";
@@ -30,8 +30,8 @@ const LanguageScene = () => {
     useHelper(rectAreaLightRef, RectAreaLightHelper, 'blue')
 
     // const { intensity, width, height, color } = useControls({ intensity: { value: 1, min: 0, max: 20 }, width: { value: 3, min: 1, max: 10 }, height: { value: 3, min: 1, max: 10 }, color: '#fff' });
-    const { intensity, width, height, color } = useControls({ intensity: { value: 1, min: 0, max: 20 }, width: { value: 3, min: 1, max: 10 }, height: { value: 3, min: 1, max: 10 }, color: '#fff' });
-    useHelper(light4, THREE.SpotLightHelper, "cyan");
+    // const { intensity, width, height, color } = useControls({ intensity: { value: 1, min: 0, max: 20 }, width: { value: 3, min: 1, max: 10 }, height: { value: 3, min: 1, max: 10 }, color: '#fff' });
+    useHelper(light1, THREE.SpotLightHelper, "cyan");
     useHelper(light5, THREE.SpotLightHelper, "cyan");
     useHelper(light6, THREE.SpotLightHelper, "cyan");
     // useHelper(light7, THREE.SpotLightHelper, "cyan");
@@ -85,7 +85,6 @@ const LanguageScene = () => {
                 colors={["#4ffb12", "#12c3fb", "#be12fb"]}
                 stops={[0.2, 0.5, 1.0]}
             />
-
 
             <spotLight //center of light points at HTML sphere
                 ref={light1}
