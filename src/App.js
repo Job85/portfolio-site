@@ -2,19 +2,28 @@ import React from 'react';
 import { Canvas } from '@react-three/fiber';
 import './App.scss';
 import './fonts/Benguiat Bold.ttf';
-import { OrbitControls } from '@react-three/drei';
+import { OrbitControls, PerspectiveCamera } from '@react-three/drei';
 import NavBar from './components/NavBar';
 import Hero from './components/Hero';
 import IntroPlane from './components/IntroPlane';
+import Cloud from './components/3DComponents/Cloud';
 
 function App() {
   return (
     <div className='scene3'>
       <Canvas>
-        <IntroPlane />
+        {/* <IntroPlane /> */}
+        <perspectiveCamera
+          default
+          fov={100}
+        />
+        <Cloud groupPosition={[60, 30, -200]} />
+        <Cloud groupPosition={[-60, 30, -140]} />
+        <Cloud groupPosition={[80, 15, -175]} />
         <OrbitControls />
-        {/* <ambientLight args={[0xff0000]} intensity={0.1} /> */}
-        <directionalLight position={[0, 0, 5]} intensity={0.5} />
+        <ambientLight args={["white"]} intensity={0.1} />
+        <directionalLight position={[0, 0, 5]} intensity={0.2} color={"white"} />
+        <directionalLight position={[0, 20, -5]} intensity={0.5} />
       </Canvas>
       {/* <NavBar /> */}
       {/* <Hero /> */}
