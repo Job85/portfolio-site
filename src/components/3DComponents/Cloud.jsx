@@ -75,7 +75,7 @@ const Cloud = (props) => {
                     depthTest
                     depthWrite
                     visible
-                    color={0xcbd9e1}
+                    color={0xffffff}
                     roughness={1}
                     metalness={0}
                     reflectivity={1}
@@ -98,7 +98,7 @@ const Cloud = (props) => {
                     depthTest
                     depthWrite
                     visible
-                    color={0xcbd9e1}
+                    color={0xffffff}
                     roughness={1}
                     metalness={0}
                     reflectivity={1}
@@ -121,7 +121,7 @@ const Cloud = (props) => {
                     depthTest
                     depthWrite
                     visible
-                    color={0xcbd9e1}
+                    color={0xffffff}
                     roughness={1}
                     metalness={0}
                     reflectivity={1}
@@ -144,7 +144,7 @@ const Cloud = (props) => {
                     depthTest
                     depthWrite
                     visible
-                    color={0xcbd9e1}
+                    color={0xffffff}
                     roughness={1}
                     metalness={0}
                     reflectivity={1}
@@ -166,7 +166,7 @@ const Cloud = (props) => {
                         depthTest
                         depthWrite
                         visible
-                        color={0xcbd9e1}
+                        color={0xffffff}
                         roughness={1}
                         metalness={0}
                         reflectivity={1}
@@ -190,7 +190,7 @@ const Cloud = (props) => {
                     depthTest
                     depthWrite
                     visible
-                    color={0xcbd9e1}
+                    color={0xffffff}
                     roughness={1}
                     metalness={0}
                     reflectivity={1}
@@ -212,7 +212,7 @@ const Cloud = (props) => {
                         depthTest
                         depthWrite
                         visible
-                        color={0xcbd9e1}
+                        color={0xffffff}
                         roughness={1}
                         metalness={0}
                         reflectivity={1}
@@ -237,7 +237,7 @@ const Cloud = (props) => {
                         depthTest
                         depthWrite
                         visible
-                        color={0xcbd9e1}
+                        color={0xffffff}
                         roughness={1}
                         metalness={0}
                         reflectivity={1}
@@ -260,7 +260,7 @@ const Cloud = (props) => {
                         depthTest
                         depthWrite
                         visible
-                        color={0xcbd9e1}
+                        color={0xffffff}
                         roughness={1}
                         metalness={0}
                         reflectivity={1}
@@ -283,7 +283,7 @@ const Cloud = (props) => {
                         depthTest
                         depthWrite
                         visible
-                        color={0xcbd9e1}
+                        color={0xffffff}
                         roughness={1}
                         metalness={0}
                         reflectivity={1}
@@ -308,7 +308,7 @@ const Cloud = (props) => {
                         depthTest
                         depthWrite
                         visible
-                        color={0xcbd9e1}
+                        color={0xffffff}
                         roughness={1}
                         metalness={0}
                         reflectivity={1}
