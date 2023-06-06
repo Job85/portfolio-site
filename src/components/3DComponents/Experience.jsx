@@ -3,11 +3,11 @@ import { useFrame } from "@react-three/fiber";
 import { useRef, useState, useEffect } from "react";
 
 const Experience = () => {
-    const [sunPosition, setSunPosition] = useState([0, 0, 0]); // 0, 0.1, -1
+    const [sunPosition, setSunPosition] = useState([0, 0, 0]);
     console.log(sunPosition)
     const [animationStarted, setAnimationStarted] = useState(false);
     const [animationStage, setAnimationStage] = useState(0);
-    const [cloud, setCloud] = useState("sunset")
+    const [cloud, setCloud] = useState("night") // "sunset" | "dawn" | "night" | "warehouse" | "forest" | "apartment" | "studio" | "city" | "park" | "lobby"
     const timeFactor = 0.1; // Adjust this value to control the speed of the animation
 
     useEffect(() => {
@@ -24,14 +24,13 @@ const Experience = () => {
                 case 0:
                     if (sunPosition[1] > -0.1 && sunPosition[2] < 2.5) {
                         setSunPosition([0, -0.1, 2.4]);
-
+                        setCloud("city");
                     } else {
                         setAnimationStage(1);
                     }
                     break;
                 case 1:
                     if (sunPosition[2] < 3.5) {
-                        setCloud("dawn");
                         setSunPosition([0, -0.1, sunPosition[2] + 0.1 * timeFactor]);
                     } else {
                         setAnimationStage(2);
@@ -40,6 +39,7 @@ const Experience = () => {
                 case 2:
                     if (sunPosition[2] < 10.5) {
                         setSunPosition([0, -0.1, sunPosition[2] + 1 * timeFactor]);
+                        setCloud("sunset")
                     } else {
                         setAnimationStage(3);
                     }
@@ -54,6 +54,7 @@ const Experience = () => {
                 case 4:
                     if (sunPosition[2] < 35.5) {
                         setSunPosition([0, -0.1, sunPosition[2] + 10 * timeFactor]);
+                        setCloud("dawn")
                     } else {
                         setAnimationStage(5);
                     }
@@ -103,21 +104,24 @@ const Experience = () => {
                 case 11:
                     if (sunPosition[2] <= -3) {
                         setSunPosition([0, 0.1, -0.3])
+                        setCloud('sunset')
                     } else {
                         setAnimationStage(12)
                     }
                     break;
                 case 12:
                     if (sunPosition[2] > -2.5) {
-                        setSunPosition([0, 0.1, sunPosition[2] - 0.01 * timeFactor])
+                        setSunPosition([0, 0.1, sunPosition[2] - 1 * timeFactor])
+                        setCloud('city')
                     } else {
                         setAnimationStage(13)
                     }
                     break;
                 case 13:
-                    if (sunPosition[1] >= -0.19) {
+                    if (sunPosition[1] >= -0.101) {
                         setSunPosition([0, sunPosition[1] - 0.01 * timeFactor, -2.5])
                     } else {
+                        setCloud('night')
                         setAnimationStage(14)
                     }
                     break;
