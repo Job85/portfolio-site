@@ -132,7 +132,7 @@ const Experience = () => {
             <OrbitControls />
             <Environment preset={cloud} />
             <Sky
-                distance={500}
+                distance={450000}
                 sunPosition={sunPosition}
                 inclination={0}
                 azimuth={0}
