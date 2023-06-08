@@ -24,7 +24,7 @@ function App() {
           fade
           speed={1}
         /> */}
-        {/* <IntroPlane /> */}
+        <IntroPlane />
         <perspectiveCamera
           default
           fov={100}

@@ -14,6 +14,8 @@ const IntroPlane = () => {
                 metalness={0.9}
             />
             <Text
+                curveRadius={-10}
+                position={[0, 0, 1]}
                 color={0xFF00FF}
             >
                 Resolving Complex{"\n"}
