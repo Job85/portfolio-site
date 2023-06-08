@@ -7,7 +7,9 @@ const Experience = () => {
     console.log(sunPosition)
     const [animationStarted, setAnimationStarted] = useState(false);
     const [animationStage, setAnimationStage] = useState(0);
-    const [cloud, setCloud] = useState("night") // "sunset" | "dawn" | "night" | "warehouse" | "forest" | "apartment" | "studio" | "city" | "park" | "lobby"
+    // const [cloud, setCloud] = useState("dawn"); // "sunset" | "dawn" | "night" | "warehouse" | "forest" | "apartment" | "studio" | "city" | "park" | "lobby"
+    const [azimuth, setAzimuth] = useState(0.8);
+    const [inclination, setInclination] = useState(0.3);
     const timeFactor = 0.1; // Adjust this value to control the speed of the animation
 
     useEffect(() => {
@@ -24,7 +26,9 @@ const Experience = () => {
                 case 0:
                     if (sunPosition[1] > -0.1 && sunPosition[2] < 2.5) {
                         setSunPosition([0, -0.1, 2.4]);
-                        setCloud("city");
+                        // setCloud("city");
+                        setAzimuth(0.25);
+                        setInclination(0.5);
                     } else {
                         setAnimationStage(1);
                     }
@@ -39,7 +43,7 @@ const Experience = () => {
                 case 2:
                     if (sunPosition[2] < 10.5) {
                         setSunPosition([0, -0.1, sunPosition[2] + 1 * timeFactor]);
-                        setCloud("sunset")
+                        // setCloud("sunset")
                     } else {
                         setAnimationStage(3);
                     }
@@ -54,7 +58,7 @@ const Experience = () => {
                 case 4:
                     if (sunPosition[2] < 35.5) {
                         setSunPosition([0, -0.1, sunPosition[2] + 10 * timeFactor]);
-                        setCloud("dawn")
+                        // setCloud("dawn")
                     } else {
                         setAnimationStage(5);
                     }
@@ -96,6 +100,8 @@ const Experience = () => {
                     break;
                 case 10:
                     if (sunPosition[2] > -3) {
+                        setAzimuth(0.1);
+                        setInclination(0.25);
                         setSunPosition([0, 1, sunPosition[2] - 0.1 * timeFactor])
                     } else {
                         setAnimationStage(11)
@@ -104,7 +110,7 @@ const Experience = () => {
                 case 11:
                     if (sunPosition[2] <= -3) {
                         setSunPosition([0, 0.1, -0.3])
-                        setCloud('sunset')
+                        // setCloud('sunset')
                     } else {
                         setAnimationStage(12)
                     }
@@ -112,7 +118,7 @@ const Experience = () => {
                 case 12:
                     if (sunPosition[2] > -2.5) {
                         setSunPosition([0, 0.1, sunPosition[2] - 1 * timeFactor])
-                        setCloud('city')
+                        // setCloud('city')
                     } else {
                         setAnimationStage(13)
                     }
@@ -121,7 +127,7 @@ const Experience = () => {
                     if (sunPosition[1] >= -0.101) {
                         setSunPosition([0, sunPosition[1] - 0.01 * timeFactor, -2.5])
                     } else {
-                        setCloud('night')
+                        // setCloud('night')
                         setAnimationStage(14)
                     }
                     break;
@@ -134,12 +140,15 @@ const Experience = () => {
     return (
         <>
             <OrbitControls />
-            <Environment preset={cloud} />
+            <Environment files="hdri/kiara_1_dawn_4k.hdr" />
             <Sky
                 distance={450000}
                 sunPosition={sunPosition}
-                inclination={0}
-                azimuth={0}
+                inclination={1}
+                azimuth={0.1}
+                turbidity={0} // 0 - 20
+                rayleigh={0.05} // 0 - 4
+            // elevation={1}
             />
         </>
     );

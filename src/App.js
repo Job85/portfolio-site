@@ -13,9 +13,9 @@ function App() {
   return (
     <div className='scene3'>
       <Canvas>
-        <color attach="background" args={["#ececec"]} />
+        {/* <color attach="background" args={["#ececec"]} /> */}
         <Experience />
-        <Stars
+        {/* <Stars
           radius={100}
           depth={50}
           count={5000}
@@ -23,8 +23,8 @@ function App() {
           saturation={0}
           fade
           speed={1}
-        />
-        <IntroPlane />
+        /> */}
+        {/* <IntroPlane /> */}
         <perspectiveCamera
           default
           fov={100}
