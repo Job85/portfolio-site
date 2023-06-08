@@ -2,7 +2,7 @@ import { Environment, OrbitControls, Sky } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 import { useRef, useState, useEffect } from "react";
 
-const Experience = () => {
+const Background = () => {
     const [sunPosition, setSunPosition] = useState([0, 0, 0]);
     console.log(sunPosition)
     const [animationStarted, setAnimationStarted] = useState(false);
@@ -154,4 +154,4 @@ const Experience = () => {
     );
 };
 
-export default Experience;
+export default Background;
