@@ -7,14 +7,14 @@ import NavBar from './components/NavBar';
 import Hero from './components/Hero';
 import IntroPlane from './components/IntroPlane';
 import Cloud from './components/3DComponents/Cloud';
-import Experience from './components/3DComponents/Experience';
+import Background from './components/3DComponents/Background';
 
 function App() {
   return (
     <div className='scene3'>
       <Canvas>
         {/* <color attach="background" args={["#ececec"]} /> */}
-        <Experience />
+        <Background />
         {/* <Stars
           radius={100}
           depth={50}
