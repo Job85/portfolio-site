@@ -4,6 +4,7 @@ import Background from "./Background";
 import { OrbitControls, Line, PerspectiveCamera, useScroll } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 import Cloud from './Cloud';
+import { Ship } from "./Ship";
 
 const LINE_NB_POINTS = 4200;
 
@@ -62,12 +63,17 @@ const Experience = () => {
 
     return (
         <>
-            {/* <OrbitControls
-                enableZoom={false}
-            /> */}
+            <OrbitControls
+            // enableZoom={false}
+            />
             <group ref={cameraGroup}>
                 <Background />
                 <PerspectiveCamera position={[0, 0, 5]} fov={30} makeDefault />
+                <Ship
+                    scale={[0.2, 0.2, 0.2]}
+                    position-y={-0.1}
+                    rotation={[Math.PI, 0, Math.PI]}
+                />
             </group>
             <group
                 position-y={-2}
