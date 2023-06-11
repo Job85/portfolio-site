@@ -139,8 +139,12 @@ const Background = () => {
 
     return (
         <>
-            <OrbitControls />
-            <Environment files="hdri/kiara_1_dawn_4k.hdr" />
+            {/* <OrbitControls /> */}
+            <Environment
+                files="hdri/kiara_1_dawn_4k.hdr"
+                resolution={256}
+                frames={Infinity}
+            />
             <Sky
                 distance={450000}
                 sunPosition={sunPosition}
