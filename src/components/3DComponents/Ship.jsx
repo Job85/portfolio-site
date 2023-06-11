@@ -7,7 +7,7 @@ import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 
 export function Ship(props) {
-  const { nodes, materials } = useGLTF('/Ship-transformed.glb')
+  const { nodes, materials } = useGLTF('/models/ship/ship.glb')
   return (
     <group {...props} dispose={null}>
       <group position={[0, 2.45, -1.05]} rotation={[-Math.PI / 2, 0, 0]} scale={100}>
