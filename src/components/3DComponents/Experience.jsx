@@ -103,7 +103,7 @@ const Experience = () => {
             </group>
             <Marquee
                 position={[-4, 5, -100]}
-                rotation={[0, 90, 0]}
+                rotation={[0.5, 0.4, -0.1]} // Euler XYZ
                 text={"Resolving Complex\nProblems\nThrough Innovative\nand Efficient Design"}
             />
             <Cloud groupPosition={[50, 0, -100]} />

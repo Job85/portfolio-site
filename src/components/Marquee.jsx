@@ -8,13 +8,16 @@ const Marquee = (props) => {
             position={props.position}
             rotation={props.rotation}
             follow={true}
+            lockX={true}
+            lockY={true}
+            lockZ={true}
         >
             <mesh>
                 <planeGeometry
                     args={[10, 8, 30, 30]}
                 />
                 <meshStandardMaterial
-                    color={0x0080FF}
+                    color={0x6f00ff}
                     roughness={0.3}
                     metalness={0.9}
                 />
@@ -22,7 +25,7 @@ const Marquee = (props) => {
             <Text
                 curveRadius={-10}
                 position={[0, 0, 1]}
-                color={0xFF00FF}
+                color={0x00ffef}
             >
                 {props.text}
             </Text>
