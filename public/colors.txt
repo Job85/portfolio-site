@@ -1,0 +1,4 @@
+#6f00ff pruple
+#ff0010 red
+#90ff00 green
+#00ffef blue
