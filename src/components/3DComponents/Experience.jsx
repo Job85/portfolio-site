@@ -1,5 +1,5 @@
 import * as THREE from "three";
-import { useMemo, useRef } from "react";
+import { useMemo, useRef, forwardRef } from "react";
 import Background from "./Background";
 import { OrbitControls, Line, PerspectiveCamera, useScroll, Billboard } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
@@ -23,15 +23,20 @@ const Experience = () => {
             new THREE.Vector3(5, 0, -70),
             new THREE.Vector3(0, 0, -80),
             new THREE.Vector3(0, 0, -90),
-            new THREE.Vector3(0, 0, -100),
-            new THREE.Vector3(0, 0, -190),
+            // new THREE.Vector3(0, -6, -95),
+            // new THREE.Vector3(0, -6, -98),
+            new THREE.Vector3(0, -6, -100),
+            new THREE.Vector3(50, 0, -190),
+            new THREE.Vector3(200, 0, -390),
+            new THREE.Vector3(0, 0, -500),
+            new THREE.Vector3(0, 0, -590),
         ],
             false,
             "catmullrom",
             0.5)
     }, [])
 
-    const linePoints = useMemo(() => {
+    const trackPoints = useMemo(() => {
         return curve.getPoints(LINE_NB_POINTS);
     }, [curve])
 
@@ -44,22 +49,42 @@ const Experience = () => {
     }, [curve])
 
     const cameraGroup = useRef();
+    const shipRef = useRef();
     const scroll = useScroll();
 
     useFrame((_state, delta) => {
+        const scrollOffset = Math.max(0, scroll.offset);
         const curPointIndex = Math.min(
-            Math.round(scroll.offset * linePoints.length),
-            linePoints.length - 1
+            Math.round(scroll.offset * trackPoints.length),
+            trackPoints.length - 1
         )
-        const curPoint = linePoints[curPointIndex];
-        const pointAhead = linePoints[Math.min(curPointIndex + 1), linePoints.length - 1];
+        const curPoint = trackPoints[curPointIndex];
+        const pointAhead = trackPoints[Math.min(curPointIndex + 1, trackPoints.length - 1)];
 
         const xDisplacement = (pointAhead.x - curPoint.x) * 80;
 
         const angleRotation = (xDisplacement < 0 ? 1 : -1) *
             Math.min(Math.abs(xDisplacement), Math.PI / 3);
 
-        cameraGroup.current.position.lerp(curPoint, delta * 24)
+        cameraGroup.current.position.lerp(curPoint, delta * 24);
+
+        const lookAtPoint = curve.getPoint(
+            Math.min(scrollOffset + 0.008, 1)
+        );
+
+        const currentLookAt = cameraGroup.current.getWorldDirection(
+            new THREE.Vector3()
+        );
+
+        const targetLookAt = new THREE.Vector3()
+            .subVectors(curPoint, lookAtPoint)
+            .normalize();
+
+        const lookAt = currentLookAt.lerp(targetLookAt, delta * 24);
+        cameraGroup.current.lookAt(
+            cameraGroup.current.position.clone().add(lookAt)
+        );
+        // cameraGroup.current.lookAt(pointAhead);
     })
 
     return (
@@ -67,10 +92,11 @@ const Experience = () => {
             {/* <OrbitControls
                 enableZoom={false}
             /> */}
+            <Background />
             <group ref={cameraGroup}>
-                <Background />
                 <PerspectiveCamera position={[0, 0, 5]} fov={30} makeDefault />
                 <Ship
+                    ref={shipRef}
                     scale={[0.2, 0.2, 0.2]}
                     position-y={-0.5}
                     rotation={[Math.PI, 0, Math.PI]}
@@ -80,7 +106,7 @@ const Experience = () => {
                 position-y={-2}
             >
                 <Line
-                    points={linePoints}
+                    points={trackPoints}
                     color={0x6F00FF}
                     opacity={0.7}
                     transparent
@@ -102,14 +128,14 @@ const Experience = () => {
                 />
             </group>
             <Marquee
-                position={[-4, 5, -100]}
-                rotation={[0.5, 0.4, -0.1]} // Euler XYZ
+                position={[0, -0.1, -100]}
+                // rotation={[0.5, 0.4, -0.1]} // Euler XYZ
                 text={"Resolving Complex\nProblems\nThrough Innovative\nand Efficient Design"}
             />
             <Cloud groupPosition={[50, 0, -100]} />
-            <Cloud groupPosition={[100.5, -0.5, -2]} />
-            <Cloud groupPosition={[200, -0.2, -2]} />
-            <Cloud groupPosition={[-184, -0.2, -95]} />
+            <Cloud groupPosition={[100.5, -0.5, -290]} />
+            <Cloud groupPosition={[200, -0.2, -320]} />
+            <Cloud groupPosition={[-184, -0.2, -950]} />
             <Cloud groupPosition={[-184, -0.2, -1295]} />
             {/* <Cloud groupPosition={[100.5, -0.2, -2 * CURVE_DISTANCE]} /> */}
         </>
@@ -153,7 +179,7 @@ export default Experience
 //         return new THREE.CatmullRomCurve3(trackPoints, false, "catmullrom", 0.5);
 //     }, []);
 
-//     // const linePoints = useMemo(() => {
+//     // const trackPoints = useMemo(() => {
 //     //     return track.getPoints(LINE_NB_POINTS);
 //     // }, [track])
 
