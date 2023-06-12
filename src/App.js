@@ -8,18 +8,20 @@ import Hero from './components/Hero';
 // import IntroPlane from './components/IntroPlane';
 import Cloud from './components/3DComponents/Cloud';
 import Experience from './components/3DComponents/Experience';
+import Experience2 from './components/3DComponents/Experience2';
 
 function App() {
   return (
     <div className='scene3'>
       <Canvas>
         {/* <color attach="background" args={["#ececec"]} /> */}
-        <ScrollControls
+        <Experience2 />
+        {/* <ScrollControls
           pages={5}
           damping={0.3}
         >
           <Experience />
-        </ScrollControls>
+        </ScrollControls> */}
         {/* <Stars
           radius={100}
           depth={50}
