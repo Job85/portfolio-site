@@ -1,10 +1,11 @@
 import * as THREE from "three";
 import { useMemo, useRef } from "react";
 import Background from "./Background";
-import { OrbitControls, Line, PerspectiveCamera, useScroll } from "@react-three/drei";
+import { OrbitControls, Line, PerspectiveCamera, useScroll, Billboard } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 import Cloud from './Cloud';
 import { Ship } from "./Ship";
+import Marquee from "../Marquee";
 
 const LINE_NB_POINTS = 4200;
 
@@ -63,15 +64,15 @@ const Experience = () => {
 
     return (
         <>
-            <OrbitControls
-            // enableZoom={false}
-            />
+            {/* <OrbitControls
+                enableZoom={false}
+            /> */}
             <group ref={cameraGroup}>
                 <Background />
                 <PerspectiveCamera position={[0, 0, 5]} fov={30} makeDefault />
                 <Ship
                     scale={[0.2, 0.2, 0.2]}
-                    position-y={-0.1}
+                    position-y={-0.5}
                     rotation={[Math.PI, 0, Math.PI]}
                 />
             </group>
@@ -100,6 +101,11 @@ const Experience = () => {
                     transparent
                 />
             </group>
+            <Marquee
+                position={[-4, 5, -100]}
+                rotation={[0, 90, 0]}
+                text={"Resolving Complex\nProblems\nThrough Innovative\nand Efficient Design"}
+            />
             <Cloud groupPosition={[50, 0, -100]} />
             <Cloud groupPosition={[100.5, -0.5, -2]} />
             <Cloud groupPosition={[200, -0.2, -2]} />

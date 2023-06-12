@@ -5,7 +5,7 @@ import './fonts/Benguiat Bold.ttf';
 import { OrbitControls, PerspectiveCamera, ScrollControls, Stars } from '@react-three/drei';
 import NavBar from './components/NavBar';
 import Hero from './components/Hero';
-import IntroPlane from './components/IntroPlane';
+// import IntroPlane from './components/IntroPlane';
 import Cloud from './components/3DComponents/Cloud';
 import Experience from './components/3DComponents/Experience';
 
