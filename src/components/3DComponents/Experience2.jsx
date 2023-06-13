@@ -1,7 +1,11 @@
-import { OrbitControls, Line, CatmullRomLine } from "@react-three/drei";
+import { OrbitControls, CatmullRomLine, useScroll } from "@react-three/drei";
+import { useMemo } from "react";
 import Background from "./Background";
 import { Ship } from "./Ship";
 import Marquee from "../Marquee";
+import { CatmullRomCurve3, Vector3 } from "three";
+
+const PATH_NB_POINTS = 4200;
 
 const Experience2 = () => {
     const travelPath = [
@@ -10,17 +14,23 @@ const Experience2 = () => {
         [-2, 0, -20],
         [-3, 0, -30],
         [0, 0, -40],
-        [0, 0, -50],
-        [0, 0, -60],
-        [0, 0, -70],
-        [0, 0, -80],
+        [5, 0, -50],
+        [7, 0, -60],
+        [9, 0, -70],
+        [5, 0, -80],
         [0, 0, -90],
-        [0, -5, -100],
-        [0, 0, -190],
-        [0, 0, -390],
-        [0, 0, -500],
-        [0, 0, -590],
+        [0, -8, -100],
+        [50, 0, -190],
+        [200, 0, -390],
+        [145, 0, -500],
+        [124, 0, -590],
     ];
+
+    const travelPoints = useMemo(() => {
+        const curve = new CatmullRomCurve3(travelPath.map((point) => new Vector3(...point)));
+        return curve.getPoints(PATH_NB_POINTS);
+    }, [travelPath])
+
     return (
         <>
             <OrbitControls />
@@ -29,7 +39,7 @@ const Experience2 = () => {
                 rotation={[0, Math.PI, 0]}
             />
             <CatmullRomLine
-                points={travelPath}
+                points={travelPoints}
                 curveType="catmullrom"
                 tension={0.5}
                 color={0x90ff00}

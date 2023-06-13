@@ -15,13 +15,13 @@ function App() {
     <div className='scene3'>
       <Canvas>
         {/* <color attach="background" args={["#ececec"]} /> */}
-        <Experience2 />
-        {/* <ScrollControls
+        <ScrollControls
           pages={5}
           damping={0.3}
         >
-          <Experience />
-        </ScrollControls> */}
+          <Experience2 />
+        </ScrollControls>
+        {/* <Experience /> */}
         {/* <Stars
           radius={100}
           depth={50}
