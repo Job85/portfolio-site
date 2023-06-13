@@ -36,6 +36,8 @@ const Experience2 = () => {
             <OrbitControls />
             <Background />
             <Ship
+                scale={[0.2, 0.2, 0.2]}
+                position-y={-0.5}
                 rotation={[0, Math.PI, 0]}
             />
             <PerspectiveCamera
