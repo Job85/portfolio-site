@@ -1,4 +1,4 @@
-import { OrbitControls, CatmullRomLine, useScroll } from "@react-three/drei";
+import { OrbitControls, CatmullRomLine, useScroll, PerspectiveCamera } from "@react-three/drei";
 import { useMemo } from "react";
 import Background from "./Background";
 import { Ship } from "./Ship";
@@ -37,6 +37,11 @@ const Experience2 = () => {
             <Background />
             <Ship
                 rotation={[0, Math.PI, 0]}
+            />
+            <PerspectiveCamera
+                position={[0, 0, 5]}
+                fov={30}
+                makeDefault
             />
             <CatmullRomLine
                 points={travelPoints}
