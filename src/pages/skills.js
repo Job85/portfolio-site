@@ -4,14 +4,12 @@ import { ReactComponent as MongoDBSlateBlue } from '../assets/MongoDB_SlateBlue.
 import { ReactComponent as PostgreSQL } from '../assets/postgresql.svg';
 import { ReactComponent as Sequelize } from '../assets/sequelize.svg';
 import React from "react";
-import LanguageCanvas from "../components/3DComponents/LanguageCanvas";
 
 const Skills = () => {
 
     return (
         <section id="skills">
-            <LanguageCanvas />
-            <h1 className="header-1">Skills</h1>
+            <h1 >Skills</h1>
             <div className="container skills-container">
                 <div className="card skills-card mt-md-0 ml-md-0">
                     <div className="card-body lang">
