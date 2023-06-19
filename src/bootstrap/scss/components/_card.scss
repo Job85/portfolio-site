@@ -1,21 +1,14 @@
 .flip-card {
+    position: relative;
     background-color: transparent;
     width: 75%;
-    margin-bottom: 5rem;
+    margin-bottom: 15rem;
     perspective: 1000px;
     background: linear-gradient(222deg,
             rgb(190, 18, 251, .6) 0%,
             rgb(18, 195, 251, .6) 75%);
     border: solid #FB4A12 1px;
     cursor: pointer;
-
-    @media screen and (min-width: 280px) {
-        width: 100%;
-    }
-
-    @media screen and (min-width: 992px) {
-        width: 50%;
-    }
 }
 
 .flip-title {
@@ -33,19 +26,33 @@
     }
 }
 
+
 .flip-card-inner {
-    width: inherit;
-    text-align: center;
-    transition: .5s linear 0.1s;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
     transform-style: preserve-3d;
+    perspective: 1000px;
+}
 
-    &.hover-trigger:hover {
-        transform: rotateY(180deg);
-    }
+.flip-card.flipped .flip-card-inner {
+    transform: rotateY(180deg);
+}
 
-    &.flip {
-        transform: rotateY(180deg);
-    }
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.flip-card-front {
+    z-index: 2;
+}
+
+.flip-card-back {
+    transform: rotateY(180deg);
 }
 
 .p-card {
@@ -108,4 +115,12 @@
 
 .card-link {
     color: #4ffb12;
+}
+
+.back-card {
+    height: 100%;
+}
+
+.custom-card {
+    background-color: transparent;
 }
