@@ -11,7 +11,6 @@ const Home = () => {
                     <h1 className="heading">
                         Resolving Complex Problems <br />
                         Through <span className="bold">Innovative</span> and <span className="bold">Efficient</span> Design
-                        {/* <span className="sphere container"></ span> */}
                     </h1>
                 </div>
             </div>
