@@ -1,10 +1,15 @@
 import React, { useRef, useEffect, useState } from "react";
 import cn from "classnames";
 import Card from "react-bootstrap/Card";
+import { ListGroup, ListGroupItem } from "react-bootstrap";
 
 const PCard = ({ card }) => {
 
     const [flip, setFlip] = useState(false);
+    const frontRef = useRef(null);
+    const backRef = useRef(null);
+    const cardRef = useRef(null);
+    const [contentHeight, setContentHeight] = useState(0);
 
     const handleClick = () => {
         if (card.variant === 'click') {
@@ -24,27 +29,32 @@ const PCard = ({ card }) => {
         }
     }
 
-    const frontRef = useRef(null);
-    const backRef = useRef(null);
-    const cardRef = useRef(null);
-
-    const [contentHeight, setContentHeight] = useState(0);
 
     useEffect(() => {
-        setContentHeight(frontRef.current.offsetHeight);
-    }, [])
-
-    const updateContentHeight = () => {
-        setContentHeight(flip ? backRef.current.offsetHeight : frontRef.current.offsetHeight);
-    }
+        const frontHeight = frontRef.current.offsetHeight;
+        const backHeight = backRef.current.offsetHeight;
+        setContentHeight(Math.max(frontHeight, backHeight));
+    }, [flip]);
 
     useEffect(() => {
-        updateContentHeight();
-    }, [flip, card.variant])
-
-    useEffect(() => {
-        cardRef.current.style.height = `${contentHeight + 40}px`;
+        cardRef.current.style.height = `${contentHeight}px`;
     }, [contentHeight]);
+
+    useEffect(() => {
+        const handleResize = () => {
+            const frontHeight = frontRef.current.offsetHeight;
+            const backHeight = backRef.current.offsetHeight;
+            console.log("Front Height:", frontHeight);
+            console.log("Back Height:", backHeight);
+            setContentHeight(Math.max(frontHeight, backHeight));
+        };
+
+        window.addEventListener("resize", handleResize);
+
+        return () => {
+            window.removeEventListener("resize", handleResize);
+        }
+    }, [flip]);
 
     return (
         <div
@@ -67,9 +77,9 @@ const PCard = ({ card }) => {
                             {card.title}
                         </Card.Title>
                         <Card.Body>
-                            {card.front}
+                            <Card.Img src={card.img} alt="Card Image" />
                             <Card.Text>
-                                {card.paragraph}
+                                {card.text}
                             </Card.Text>
                         </Card.Body>
                     </Card>
@@ -81,12 +91,60 @@ const PCard = ({ card }) => {
                         className="back-card custom-card"
                     >
                         <Card.Body>
-                            <Card.Text>
-                                <Card.Subtitle>
-                                    Technologies
-                                </Card.Subtitle>
-                                {card.details}
-                            </Card.Text>
+                            <Card.Title>
+                                {card.title2}
+                            </Card.Title>
+                            <Card.Header>
+                                {card.subTitle}
+                            </Card.Header>
+                            <ListGroup>
+                                {card.listGroup.map((item, index) => (
+                                    <ListGroup.Item
+                                        key={index}
+                                        className="linear-grad-background"
+                                    >
+                                        {item}
+                                    </ListGroup.Item>
+                                ))}
+                            </ListGroup>
+                            <Card.Header>
+                                {card.subTitle2}
+                            </Card.Header>
+                            <ListGroup>
+                                {card.listGroup2.map((item, index) => (
+                                    <ListGroup.Item
+                                        key={index}
+                                        className="linear-grad-background"
+                                    >
+                                        {item}
+                                    </ListGroup.Item>
+                                ))}
+                            </ListGroup>
+                            <Card.Header>
+                                {card.subTitle3}
+                            </Card.Header>
+                            <ListGroup>
+                                {card.listGroup3.map((item, index) => (
+                                    <ListGroup.Item
+                                        key={index}
+                                        className="linear-grad-background"
+                                    >
+                                        {item}
+                                    </ListGroup.Item>
+                                ))}
+                            </ListGroup>
+                            <Card.Link href={card.site}>Deployed Site</Card.Link>
+                            {card.gitHub || card.gitHub2 ? (
+                                <div>
+                                    <Card.Link href={card.gitHub}>Front-End Repo</Card.Link>
+                                    <Card.Link href={card.gitHub2}>Back-End Repo</Card.Link>
+                                </div>
+                            ) :
+                                <div>
+                                    Client Website Source Code Private
+                                </div>
+                            }
+
                         </Card.Body>
                     </Card>
                 </div>
