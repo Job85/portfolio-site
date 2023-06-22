@@ -36,11 +36,11 @@ const NavBar = () => {
         >
             <Container className="d-flex justify-items-center me-100">
                 <Navbar.Brand className="" href="#">
-                    <LogoCanvas />
+                    <img src={logo} alt="logo" className="logo" />
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse className="me-100" id="responsive-navbar-nav">
-                    <Nav className="" data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="120">
+                    <Nav className=' data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="120"'>
                         <Nav.Link className="" onClick={() => scrollToSection("home")}>Home</Nav.Link>
                         <Nav.Link className="" onClick={() => scrollToSection("skills")}>Skills</Nav.Link>
                         <Nav.Link className="" onClick={() => scrollToSection("projects")}>Projects</Nav.Link>
