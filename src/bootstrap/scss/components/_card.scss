@@ -4,18 +4,9 @@
     width: 75%;
     margin-bottom: 15rem;
     perspective: 1000px;
-    // background: linear-gradient(222deg,
-    //         rgb(190, 18, 251, .6) 0%,
-    //         rgb(18, 195, 251, .6) 75%);
-    // border: solid #FB4A12 1px;
 }
 
 .flip-card {
-    // position: relative;
-    // background-color: transparent;
-    // width: 75%;
-    // margin-bottom: 15rem;
-    // perspective: 1000px;
     background: linear-gradient(222deg,
             rgb(190, 18, 251, .6) 0%,
             rgb(18, 195, 251, .6) 75%);
@@ -84,17 +75,32 @@
 
 .skills-card {
     border: transparent;
-    border-radius: 50%;
+    // border-radius: 50%;
     color: rgba(18, 195, 251, 1);
     background-image: radial-gradient(rgba(190, 18, 251) 0%,
             rgba(190, 18, 251) 50%,
             rgba(190, 18, 251, .1) 100%);
+    width: 50%;
+
+    @media screen and (max-width: 874px) {
+        width: 100%;
+    }
+
+
 }
 
 .skills-grp {
-    padding-left: 4rem;
+    padding: 4rem;
     width: 80%;
     border-radius: 90%;
+
+    @media screen and (max-width: 437px) {
+        padding: 2rem;
+    }
+
+    @media screen and (max-width: 333px) {
+        padding: 1.25rem;
+    }
 }
 
 .skills-li {
