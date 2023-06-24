@@ -95,6 +95,18 @@ const PCard = ({ card, type }) => {
                                                     </ListGroup.Item>
                                                 ))}
                                             </>
+                                            <>
+                                                {card.strings.map((string, index) => (
+                                                    <ListGroup.Item
+                                                        key={index}
+                                                        className="skills-li"
+                                                    >
+                                                        <div>
+                                                            {string}
+                                                        </div>
+                                                    </ListGroup.Item>
+                                                ))}
+                                            </>
                                         </ListGroup>
                                     </Card.Body>
                                 </Card>

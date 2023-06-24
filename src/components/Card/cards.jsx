@@ -88,23 +88,34 @@ export const skillsCard = [
         title: "Languages",
         icons: [faHtml5, faCss3Alt, faSquareJs, faPython],
         svgs: [],
+        strings: []
     },
     {
         id: "2",
         title: "Frameworks",
         icons: [faSass, faBootstrap, faVuejs],
-        svgs: [Sequelize]
+        svgs: [],
+        strings: ["Django"]
     },
     {
         id: "3",
         title: "Libraries",
         icons: [faReact],
-        svgs: [],
+        svgs: [Sequelize],
+        strings: ["Mongoose"]
     },
     {
         id: "4",
+        title: "Environments",
+        icons: [faNode],
+        svgs: [],
+        strings: []
+    },
+    {
+        id: "5",
         title: "Databases",
         icons: [],
         svgs: [PostgreSQL, MongoDBSlateBlue],
+        strings: []
     },
 ]
