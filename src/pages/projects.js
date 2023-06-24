@@ -1,14 +1,15 @@
 import React from "react";
 import PCard from "../components/Card/Card";
-import cards from "../components/Card/cards";
+import { projectCards } from "../components/Card/cards";
 
 const Projects = () => {
 
     return (
         <section id="projects">
+            <h1>Projects</h1>
             <div className="card-wrapper">
-                {cards.map((card) =>
-                    <PCard key={card.id} card={card} />
+                {projectCards.map((card) =>
+                    <PCard key={card.id} card={card} type="projects" />
                 )}
             </div>
         </section>

@@ -1,9 +1,10 @@
 import token from "../../assets/Token_Huntr.png";
 import inventory from "../../assets/Restaurant-Inventory-App.png";
 import qc from "../../assets/QCDetailing.png";
-import { Card, ListGroupItem } from "react-bootstrap";
-import { ListGroup } from "react-bootstrap";
-// styled from _card.scss
+import { faHtml5, faCss3Alt, faSquareJs, faSass, faBootstrap, faVuejs, faReact, faNode, faPython } from "@fortawesome/free-brands-svg-icons";
+import { ReactComponent as MongoDBSlateBlue } from '../../assets/MongoDB_SlateBlue.svg';
+import { ReactComponent as PostgreSQL } from '../../assets/postgresql.svg';
+import { ReactComponent as Sequelize } from '../../assets/sequelize.svg';
 
 const text1 = "A web app for the adventerous to go Geo Caching. Using REST API's users have the ability to perform full CRUD of the locations model. \n Click to flip card"
 const text2 = "A web app for the hospitality industry designed to streamline the inventory process. Using REST API's users have the ability to perform full CRUD of the items model. \n Click to flip card"
@@ -28,7 +29,7 @@ let newText3 = text3.split('\n').map(i => {
     </div>
 })
 
-const cards = [
+export const projectCards = [
     {
         id: "1",
         variant: "click",
@@ -79,4 +80,31 @@ const cards = [
     },
 ];
 
-export default cards
+
+
+export const skillsCard = [
+    {
+        id: "1",
+        title: "Languages",
+        icons: [faHtml5, faCss3Alt, faSquareJs, faPython],
+        svgs: [],
+    },
+    {
+        id: "2",
+        title: "Frameworks",
+        icons: [faSass, faBootstrap, faVuejs],
+        svgs: [Sequelize]
+    },
+    {
+        id: "3",
+        title: "Libraries",
+        icons: [faReact],
+        svgs: [],
+    },
+    {
+        id: "4",
+        title: "Databases",
+        icons: [],
+        svgs: [PostgreSQL, MongoDBSlateBlue],
+    },
+]
