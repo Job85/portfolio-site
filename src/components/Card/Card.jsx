@@ -66,13 +66,14 @@ const PCard = ({ card, type }) => {
                             ref={cardRef}
                         >
                             <div className="flip-card-front">
+
+                                <Card.Title className="skills-title">
+                                    {card.title}
+                                </Card.Title>
                                 <Card
                                     ref={frontRef}
                                     className="skills-card"
                                 >
-                                    <Card.Title>
-                                        {card.title}
-                                    </Card.Title>
                                     <Card.Body>
                                         <ListGroup className="skills-grp">
                                             <>
