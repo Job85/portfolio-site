@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const PCard = ({ card, type }) => {
 
     const [flip, setFlip] = useState(false);
+    const [activeSide, setActiveSide] = useState("front");
     const frontRef = useRef(null);
     const backRef = useRef(null);
     const cardRef = useRef(null);
@@ -15,6 +16,7 @@ const PCard = ({ card, type }) => {
     const handleClick = () => {
         if (card.variant === 'click') {
             setFlip(!flip);
+            setActiveSide(flip ? 'front' : 'back');
         }
     }
 
@@ -34,8 +36,11 @@ const PCard = ({ card, type }) => {
     useEffect(() => {
         const frontHeight = frontRef.current.offsetHeight;
         const backHeight = backRef.current.offsetHeight;
-        setContentHeight(Math.max(frontHeight, backHeight));
-    }, [flip]);
+        const activeHeight = activeSide === 'front' ? frontHeight : backHeight;
+        setContentHeight(activeHeight);
+
+        cardRef.current.style.height = `${activeHeight}px`;
+    }, [flip, activeSide]);
 
     useEffect(() => {
         cardRef.current.style.height = `${contentHeight}px`;
@@ -45,7 +50,8 @@ const PCard = ({ card, type }) => {
         const handleResize = () => {
             const frontHeight = frontRef.current.offsetHeight;
             const backHeight = backRef.current.offsetHeight;
-            setContentHeight(Math.max(frontHeight, backHeight));
+            const activeHeight = activeSide === "front" ? frontHeight : backHeight;
+            setContentHeight(activeHeight);
         };
 
         window.addEventListener("resize", handleResize);
@@ -53,7 +59,7 @@ const PCard = ({ card, type }) => {
         return () => {
             window.removeEventListener("resize", handleResize);
         }
-    }, [flip]);
+    }, [flip, activeSide]);
 
     return (
         <div
@@ -140,22 +146,20 @@ const PCard = ({ card, type }) => {
                         >
                             <div className="flip-card-inner">
                                 <div className="flip-card-front">
-                                    <div className="flip-card-front">
-                                        <Card
-                                            ref={frontRef}
-                                            className="custom-card"
-                                        >
-                                            <Card.Title>
-                                                {card.title}
-                                            </Card.Title>
-                                            <Card.Body>
-                                                <Card.Img src={card.img} alt="Card Image" />
-                                                <Card.Text>
-                                                    {card.text}
-                                                </Card.Text>
-                                            </Card.Body>
-                                        </Card>
-                                    </div>
+                                    <Card
+                                        ref={frontRef}
+                                        className="custom-card"
+                                    >
+                                        <Card.Title>
+                                            {card.title}
+                                        </Card.Title>
+                                        <Card.Body>
+                                            <Card.Img src={card.img} alt="Card Image" />
+                                            <Card.Text>
+                                                {card.text}
+                                            </Card.Text>
+                                        </Card.Body>
+                                    </Card>
                                 </div>
                                 <div className="flip-card-back">
                                     <Card
