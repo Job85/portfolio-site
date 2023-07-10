@@ -108,9 +108,9 @@ const PCard = ({ card, type }) => {
                                                         key={index}
                                                         className="skills-li"
                                                     >
-                                                        <div>
+                                                        <span>
                                                             {string}
-                                                        </div>
+                                                        </span>
                                                     </ListGroup.Item>
                                                 ))}
                                             </>

@@ -11,22 +11,22 @@ const text2 = "A web app for the hospitality industry designed to streamline the
 const text3 = "A website built for a client per their details and with UX and UI design standards per my suggestions. \n Click to flip card"
 
 let newText1 = text1.split('\n').map(i => {
-    return <div className="card-text" style={{ color: '#4ffb12' }}
+    return <span className="card-text" style={{ color: '#4ffb12' }}
     >
         {i}
-    </div>
+    </span>
 })
 let newText2 = text2.split('\n').map(i => {
-    return <div style={{ color: '#4ffb12' }}
+    return <span style={{ color: '#4ffb12' }}
     >
         {i}
-    </div>
+    </span>
 })
 let newText3 = text3.split('\n').map(i => {
-    return <div style={{ color: '#4ffb12' }}
+    return <span style={{ color: '#4ffb12' }}
     >
         {i}
-    </div>
+    </span>
 })
 
 export const projectCards = [
