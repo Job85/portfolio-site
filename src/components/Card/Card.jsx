@@ -4,8 +4,9 @@ import Card from "react-bootstrap/Card";
 import { ListGroup } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const PCard = ({ card, type }) => {
+const PCard = ({ card, type, isLastCard }) => {
 
+    const cardClassName = isLastCard ? "my-card last-card" : "my-card";
     const [flip, setFlip] = useState(false);
     const [activeSide, setActiveSide] = useState("front");
     const frontRef = useRef(null);
@@ -32,6 +33,11 @@ const PCard = ({ card, type }) => {
         }
     }
 
+    // moved the second useEffect to be first and removed the dependency and changed cardRef `${contentHeight}` => `${frontHeight}` for initial rendering
+    useEffect(() => {
+        const frontHeight = frontRef.current.offsetHeight;
+        cardRef.current.style.height = `${frontHeight}px`;
+    }, []);
 
     useEffect(() => {
         const frontHeight = frontRef.current.offsetHeight;
@@ -40,11 +46,7 @@ const PCard = ({ card, type }) => {
         setContentHeight(activeHeight);
 
         cardRef.current.style.height = `${activeHeight}px`;
-    }, [flip, activeSide]);
-
-    useEffect(() => {
-        cardRef.current.style.height = `${contentHeight}px`;
-    }, [contentHeight]);
+    }, [flip, activeSide, contentHeight]);
 
     useEffect(() => {
         const handleResize = () => {
@@ -54,16 +56,18 @@ const PCard = ({ card, type }) => {
             setContentHeight(activeHeight);
         };
 
+        handleResize();
+
         window.addEventListener("resize", handleResize);
 
         return () => {
             window.removeEventListener("resize", handleResize);
         }
-    }, [flip, activeSide]);
+    }, [flip, activeSide, contentHeight]);
 
     return (
         <div
-            className="my-card"
+            className={cardClassName}
         >
             <div>
                 {type === "skills" ? (
@@ -166,7 +170,7 @@ const PCard = ({ card, type }) => {
                                         ref={backRef}
                                         className="back-card custom-card"
                                     >
-                                        <Card.Body>
+                                        <Card.Body className="custom-card-body">
                                             <Card.Title>
                                                 {card.title2}
                                             </Card.Title>

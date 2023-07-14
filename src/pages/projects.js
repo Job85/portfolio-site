@@ -8,8 +8,12 @@ const Projects = () => {
         <section id="projects">
             <h1>Projects</h1>
             <div className="card-wrapper">
-                {projectCards.map((card) =>
-                    <PCard key={card.id} card={card} type="projects" />
+                {projectCards.map((card, index) =>
+                    <PCard
+                        key={card.id}
+                        card={card}
+                        isLastCard={index === projectCards.length - 1}
+                        type="projects" />
                 )}
             </div>
         </section>

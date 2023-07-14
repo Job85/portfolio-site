@@ -6,6 +6,12 @@
     perspective: 1000px;
 }
 
+.custom-card-body {
+    @media screen and (max-width: 401px) {
+        padding: 0;
+    }
+}
+
 .flip-card {
     background: linear-gradient(222deg,
             rgb(190, 18, 251, .6) 0%,
