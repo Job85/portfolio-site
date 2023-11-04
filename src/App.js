@@ -18,7 +18,7 @@ function App() {
           pages={5}
           damping={0.3}
         >
-          <Experience2 />
+          <Experience />
         </ScrollControls>
       </Canvas>
     </div>
