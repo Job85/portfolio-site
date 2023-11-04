@@ -54,7 +54,7 @@ export const projectCards = [
         title: "Inventory App",
         title2: "Technologies",
         text: newText2,
-        site: "https://token-huntr-app.web.app/",
+        site: "https://restaurant-inventory-77229.web.app//",
         gitHub: "https://github.com/Job85/Restaurant-Inventory-App",
         gitHub2: "https://github.com/Job85/inventory-app-backend",
         subTitle: "Languages",
